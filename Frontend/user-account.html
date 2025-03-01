@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account</title>
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><strong><span class="iconify" data-icon="stash:stars"></span>Hello, Stars!</strong></li>
+        </ul>
+        <ul>
+            <li><button onclick="window.location.href='map.html'">Map</button></li>
+            <li><button onclick="window.location.href='index.html'">Home</button></li>
+            <li><button onclick="window.location.href='constellations.html'">Constellations</button></li>
+        </ul>
+    </nav>
+
+    <div class="account-container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <h2>User Profile</h2>
+                <img src="profile-placeholder.png" alt="User Profile Picture">
+                <h3 id="user-name">Loading...</h3>
+                <p id="user-email">Loading...</p>
+            </div>
+
+            <div class="profile-stats">
+                <div class="stat-box">
+                    <h4>Friends</h4>
+                    <p id="friend-count">0</p>
+                </div>
+                <div class="stat-box">
+                    <h4>Constellations Logged</h4>
+                    <p id="logged-count">0</p>
+                </div>
+                <div class="stat-box">
+                    <h4>Nights Stargazing</h4>
+                    <p id="nights-count">0</p>
+                </div>
+            </div>
+
+            <div class="profile-trophies">
+                <h3>Top Trophies</h3>
+                <div id="selected-trophies" class="trophy-display">
+                    <p>Select up to 3 trophies.</p>
+                </div>
+                <button class="customize-btn" onclick="openTrophySelector()">Customize Displayed Trophies</button>
+            </div>
+            
+            <!-- Trophy Selection Popup -->
+            <div id="trophy-popup" class="popup">
+                <div class="popup-content">
+                    <h3>Select Up to 3 Trophies</h3>
+                    <div id="trophy-selection"></div>
+                    <button onclick="saveSelectedTrophies()" class="save-btn">Save Selection</button>
+                    <button onclick="closeTrophySelector()" class="close-btn">Cancel</button>
+                </div>
+            </div>            
+
+            <button class="logout-btn">Log Out</button>
+        </div>
+    </div>
+
+    <script src="user-account.js"></script>
+</body>
+</html>

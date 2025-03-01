@@ -1,5 +1,5 @@
 body {
-    background-color: #f0f0f0;
+    background-color: #13171f;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0; 
@@ -20,4 +20,184 @@ body {
     background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a background to make the UI more readable */
     padding: 10px;
     border-radius: 5px;
+}
+
+body.user-account {
+    background-color: #13171f;
+    color: #e0e0e0;
+}
+
+/* Account Page Container */
+.account-container {
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/* Profile Card */
+.profile-card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+}
+
+.profile-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Stats Section */
+.profile-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.stat-box {
+    background: #252a34;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1;
+    margin: 5px;
+}
+
+.stat-box h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #c89bfc;
+}
+
+.stat-box p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0 0;
+}
+
+/* Trophies */
+.trophy-section {
+    margin-top: 20px;
+}
+
+.trophy-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 24px;
+}
+
+/* Logout Button */
+.logout-btn {
+    background: #c89bfc;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.logout-btn:hover {
+    background: #b07be8;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .profile-stats {
+        flex-direction: column;
+    }
+}
+
+/* Trophy Section */
+.profile-trophies {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.trophy-display {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.trophy {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.trophy.selected {
+    border: 2px solid #c89bfc;
+    transform: scale(1.1);
+}
+
+/* Customize Button */
+.customize-btn {
+    background: #c89bfc;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.customize-btn:hover {
+    background: #b07be8;
+}
+
+/* Trophy Selection Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+#trophy-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.save-btn, .close-btn {
+    background: #c89bfc;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 8px 16px;
+    margin: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.save-btn:hover, .close-btn:hover {
+    background: #b07be8;
 }
