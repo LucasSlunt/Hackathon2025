@@ -79,6 +79,28 @@ map.on('click', function(e) {
     var marker = L.marker([lat, lng]).addTo(map)
         .bindPopup(locationDescription)
         .openPopup();
+    // Save marker details to pins.json
+    fetch('markers.json')
+        .then(response => response.json())
+        .then(data => {
+            var newMarker = {
+                id: data.markers.length + 1,
+                latitude: lat,
+                longitude: lng,
+                description: locationDescription
+            };
+            data.markers.push(newMarker);
+
+            return fetch('markers.json', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+        })
+        .catch(error => console.error('Error:', error));
+    
 
     // Add event listener to the marker to call locatePath when clicked
     marker.on('click', function() {
