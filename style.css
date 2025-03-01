@@ -12,7 +12,7 @@ body {
     z-index: 1;
 }
 
-#ui {
+.ui {
     position: fixed;
     top: 10px;
     right: 10px;

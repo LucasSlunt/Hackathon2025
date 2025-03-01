@@ -6,10 +6,15 @@ if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
         var userLat = position.coords.latitude;
         var userLng = position.coords.longitude;
-        map.setView([userLat, userLng], 8); // Zoom level 10 for a closer view
+        map.setView([userLat, userLng], 8); // Center map on user's location
+        L.marker([userLat, userLng]).addTo(map)
+            .bindPopup('You are here!')
+            .openPopup();
+    }, function() {
+        alert('Geolocation failed.');
     });
 } else {
-    console.log("Geolocation is not supported by this browser.");
+    alert('Geolocation is not supported by this browser.');
 }
 
 
@@ -29,3 +34,30 @@ var viirsOverlay = L.tileLayer(
     }
   );
   viirsOverlay.addTo(map);
+
+// Function to locate a path between two points using roads
+function locatePath(startLat, startLng, endLat, endLng) {
+    var startPoint = L.latLng(startLat, startLng);
+    var endPoint = L.latLng(endLat, endLng);
+
+    // Use an external routing service like OSRM or Mapbox Directions API
+    var routingControl = L.Routing.control({
+        waypoints: [startPoint, endPoint],
+        router: L.Routing.osrmv1({
+            serviceUrl: 'https://router.project-osrm.org/route/v1'
+        }),
+        createMarker: function() { return null; }, // No markers
+        lineOptions: {
+            styles: [{ color: 'blue', weight: 4 }]
+        }
+    }).addTo(map);
+
+    // Fit the map to the route
+    routingControl.on('routesfound', function(e) {
+        var route = e.routes[0];
+        map.fitBounds(L.latLngBounds(route.coordinates));
+    });
+}
+
+
+locatePath( 50.00077, -119.40266, 49.94728, -119.42667);
