@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
        <title>Profile</title>
+       <script defer src="profile.js"></script> <!-- Ensure JavaScript loads properly -->
     </head>
-<html>
     <body class="container">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
         <link rel="stylesheet" href="profile.css">
@@ -20,14 +20,65 @@
         </nav>
 
         <div class="user">
-            <img src="https://robohash.org/jackson.png?size=100x100" alt="Jackson">
+            <img id="profile-pic" src="https://robohash.org/jackson.png?size=100x100" alt="Jackson">
             <div class="user-info">
                 <h3>Jackson</h3>
                 <p>Stargazing Enthusiast</p>
+                <button id="openChangeProfile">Change Profile Image</button>                
             </div>
         </div>
           
-        
-        
+        <!-- Profile Image Upload Modal -->
+        <div id="uploadModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>Upload Profile Picture</h3>
+                
+                <!-- Image Preview -->
+                <img id="imagePreview" src="https://robohash.org/default.png?size=100x100" alt="Profile Preview">
+
+                <!-- File Upload -->
+                <input type="file" id="fileInput" accept="image/*">
+
+                <!-- Upload Button -->
+                <button id="uploadImage">Save</button>
+            </div>
+        </div>
+
+        <div class="profile-stats">
+            <div class="stat-box">
+                <h4>Friends</h4>
+                <p id="friend-count">0</p>
+            </div>
+            <div class="stat-box">
+                <h4>Constellations Logged</h4>
+                <p id="logged-count">0</p>
+            </div>
+            <div class="stat-box">
+                <h4>Nights Stargazing</h4>
+                <p id="nights-count">0</p>
+            </div>
+        </div>
+
+        <!-- Profile Trophies Section -->
+        <div class="profile-trophies">
+            <h3>Top Trophies</h3>
+            <div id="selected-trophies" class="trophy-display">
+                <p>Select up to 3 trophies.</p>
+            </div>
+            <button class="customize-btn" onclick="openTrophySelector()">Customize Displayed Trophies</button>
+        </div>
+
+        <!-- Trophy Selection Modal -->
+        <div id="trophyModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeTrophySelector()">&times;</span>
+                <h3>Select Your Top 3 Trophies</h3>
+                <div id="all-trophies" class="trophy-list">
+                    <!-- Dynamically loaded trophies appear here -->
+                </div>
+                <button id="saveTrophies" onclick="saveSelectedTrophies()">Save</button>
+            </div>
+        </div>
     </body>
 </html>
