@@ -1,0 +1,10 @@
+.container{
+    display: flexbox;
+}
+
+.user img {
+    display: flexbox;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
