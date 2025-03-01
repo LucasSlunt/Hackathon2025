@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="google-signin-client_id" content="1083152079474-biveh2i14lno929umcf3op1c3345g1tf.apps.googleusercontent.com.apps.googleusercontent.com">
+        
+        <!-- External Stylesheets -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <link rel="stylesheet" href="constellation.css"> <!-- Link to external CSS file -->
+
+        <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    </head>
+    <body class="container">
+
+        <nav>
+            <ul>
+                <li><strong><span class="iconify" data-icon="stash:stars"></span>Hello, Stars!</strong></li>
+            </ul>
+            <ul>
+                <li><button onclick="window.location.href='map.html'">Map</button></li>
+                <li><button href="#">About</button></li>
+                <li><button onclick="window.location.href='index.html'">Home</button></li>
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            </ul>
+        </nav>
+
+        <h2>Constellations</h2>
+
+        <!-- Search Bar -->
+        <input type="text" id="searchInput" placeholder="Search constellations..." onkeyup="filterConstellations()">
+
+        <!-- List of Constellations -->
+        <div id="constellation-list">
+            <p>Loading...</p>
+            
+        </div>
+
+        <!-- Modal (Hidden by Default) -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2 id="modal-title"></h2>
+                <hr id="modal-line">
+                <p id="modal-description"></p>
+                <p><strong>Brightest Star:</strong> <span id="modal-brightest-star"></span></p>
+                <p><strong>First Appearance:</strong> <span id="modal-first-appearance"></span></p>
+                <p><strong>Best Month to See:</strong> <span id="modal-best-month"></span></p>
+                <p><strong>Represents:</strong> <span id="modal-represents"></span></p>
+                <p><strong>History:</strong> <span id="modal-history"></span></p>
+                <p><strong>Fun Fact:</strong> <span id="modal-fun-fact"></span></p>
+            </div>
+        </div>
+
+        <!-- External JavaScript File -->
+        <script src="constellation.js"></script>
+
+    </body>
+</html>

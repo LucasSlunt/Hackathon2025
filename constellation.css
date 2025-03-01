@@ -1,0 +1,157 @@
+/* Constellations Page Specific Styles */
+body {
+    background-color: #13171f;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+}
+
+/* Centering content */
+.constellations-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Make search bar full width */
+#searchInput {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+#searchInput:focus {
+    border-color: #C89BFC; /* Change to any color you like */
+    outline: none; /* Removes the default blue outline */
+    box-shadow: 0 0 5px #C89BFC; /* Optional glow effect */
+}
+
+/* Constellation Items - Now switches dynamically */
+#constellation-list {
+    display: grid;
+    grid-template-columns: 1fr; /* Default: 1 column */
+    gap: 15px; /* Space between cards */
+}
+
+/* Constellation Card Styles */
+.constellation {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+    width: 100%; /* Match grid column width */
+    max-width: 100%; /* Ensures responsiveness */
+}
+
+.constellation:hover {
+    transform: scale(1.05);
+    border: 2px solid #C89BFC;
+}
+
+.constellation h3 {
+    margin: 0 0 10px;
+    color: #C89BFC;
+    font-size: 24px;
+}
+
+.constellation p {
+    margin: 5px 0;
+    color: #bdbdbd;
+    font-size: 18px;
+}
+
+/* 🔹 Change to 2 columns for tablets */
+@media (min-width: 768px) {
+    #constellation-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+    
+    .constellation {
+        padding: 15px;
+    }
+
+    .constellation h3 {
+        font-size: 22px;
+    }
+
+    .constellation p {
+        font-size: 16px;
+    }
+}
+
+/* 🔹 Change to 3 columns for larger screens */
+@media (min-width: 1200px) {
+    #constellation-list {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+    width: 70%;
+    height: 70%;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.modal-content p {
+    line-height: 1;
+}
+
+/* Horizontal line after the title */
+#modal-line {
+    border: 0;
+    border-top: 2px solid #e0e0e0; /* Line color */
+    margin: 20px 0; /* Add space above and below the line */
+    width: 100%; /* Make the line shorter (adjust as needed) */
+    margin-left: auto;
+    margin-right: auto; /* Center the line */
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Modal Title */
+.modal h2 {
+    color: #C89BFC;
+    margin-bottom: 10px;
+}
+
+/* Modal Text */
+.modal p {
+    color: #e0e0e0;
+}
+
