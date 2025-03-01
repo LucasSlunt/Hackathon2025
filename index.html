@@ -2,6 +2,21 @@
     <body class="container">
         <!-- link to PicoCSS styling cdn -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-        <h1>Hello, Stars!</h1>
+        <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="hello-stars-452406.apps.googleusercontent.com">
+        <nav>
+            <ul>
+              <li><strong><span class="iconify" data-icon="stash:stars"></span>Hello, Stars!</strong></li>
+            </ul>
+            <ul>
+              <li><button href="#">About</a></button></li>
+              <li><button href="#">Learn</a></button></li>
+              <li><button href="#">Account</a></button></li>
+            </ul>
+        </nav>
+        
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        
     </body>
 </html>
