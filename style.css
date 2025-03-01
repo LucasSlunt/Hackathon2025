@@ -8,3 +8,6 @@ body {
     height: 100vh;
     width: 100%;
 }
+#ui {
+    position: absolute;
+}

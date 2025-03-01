@@ -6,7 +6,7 @@ if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
         var userLat = position.coords.latitude;
         var userLng = position.coords.longitude;
-        map.setView([userLat, userLng], 10); // Zoom level 10 for a closer view
+        map.setView([userLat, userLng], 8); // Zoom level 10 for a closer view
     });
 } else {
     console.log("Geolocation is not supported by this browser.");
