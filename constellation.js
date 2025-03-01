@@ -55,6 +55,7 @@ function displayConstellations(data) {
             document.getElementById("modal-represents").innerText = constellation.represents;
             document.getElementById("modal-history").innerText = constellation.history || "No history available."; // Use a fallback text if history is not available
             document.getElementById("modal-fun-fact").innerText = constellation.fun_fact || "No fun fact available."; // Use a fallback text if fun fact is not available
+            document.getElementById("modal-image").src = constellation.image;
             document.getElementById("modal").style.display = "flex";
         });
 

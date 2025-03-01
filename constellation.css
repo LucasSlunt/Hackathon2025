@@ -155,10 +155,22 @@ body {
     color: #e0e0e0;
 }
 
+.modal-image {
+    width: 150px; /* Set a specific width */
+    height: 150px; /* Set a specific height to match width */
+    border-radius: 20%; /* Makes the image a circle */
+    object-fit: contain; /* Ensures the entire image fits inside the circle without cropping */
+    margin: 20px 0; /* Optional: Adds space around the image */
+}
+
+
+
+
 .constellation-image {
     width: 100%; /* Make it responsive */
     max-height: 200px; /* Adjust as needed */
     object-fit: cover; /* Ensures the image is nicely cropped */
     border-radius: 10px; /* Matches the card style */
     margin-bottom: 10px;
+    
 }
