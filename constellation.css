@@ -155,3 +155,10 @@ body {
     color: #e0e0e0;
 }
 
+.constellation-image {
+    width: 100%; /* Make it responsive */
+    max-height: 200px; /* Adjust as needed */
+    object-fit: cover; /* Ensures the image is nicely cropped */
+    border-radius: 10px; /* Matches the card style */
+    margin-bottom: 10px;
+}

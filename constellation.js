@@ -32,7 +32,14 @@ function displayConstellations(data) {
         const div = document.createElement("div");
         div.classList.add("constellation");
 
+        // Create an image element if the constellation has an image
+        let imageTag = "";
+        if (constellation.image) {
+            imageTag = `<img src="${constellation.image}" alt="${constellation.name}" class="constellation-image">`;
+        }
+
         div.innerHTML = `
+            ${imageTag}
             <h3>${constellation.name}</h3>
             <p><strong>Area of Sky Covered:</strong> ${constellation.area_of_sky_covered}</p>
             <p><strong>Best Month to See:</strong> ${constellation.best_month_to_see}</p>
