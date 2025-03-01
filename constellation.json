@@ -900,7 +900,7 @@
         "image": "images\\scutum.png"
     },
     {
-        "name": "Serpens",
+        "name": "Serpens Caput",
         "meaning_mythology": "Represents the serpent; unique as it is split into two parts: Serpens Caput and Serpens Cauda.",
         "brightest_star": "Unukalhai",
         "first_appearance": "Ancient",
@@ -908,7 +908,21 @@
         "best_month_to_see": "July",
         "represents": "Snake",
         "history": "Serpens is unique among constellations because it is split into two parts: Serpens Caput (the Serpent\u00e2\u20ac\u2122s Head) and Serpens Cauda (the Serpent\u00e2\u20ac\u2122s Tail), which are separated by Ophiuchus, the Serpent Bearer. It represents the serpent held by Asclepius, the Greek god of medicine, symbolizing healing and renewal. This association remains today in the Rod of Asclepius, a medical symbol. Serpens is home to the Eagle Nebula (M16) and the famous Pillars of Creation.",
-        "fun_fact": ""
+        "fun_fact": "",
+        "image": "images\\serpens-caput.jpg"
+
+    },
+    {
+        "name": "Serpens Cauda",
+        "meaning_mythology": "Represents the serpent; unique as it is split into two parts: Serpens Caput and Serpens Cauda.",
+        "brightest_star": "Unukalhai",
+        "first_appearance": "Ancient",
+        "area_of_sky_covered": 1.0,
+        "best_month_to_see": "July",
+        "represents": "Snake",
+        "history": "Serpens is unique among constellations because it is split into two parts: Serpens Caput (the Serpent\u00e2\u20ac\u2122s Head) and Serpens Cauda (the Serpent\u00e2\u20ac\u2122s Tail), which are separated by Ophiuchus, the Serpent Bearer. It represents the serpent held by Asclepius, the Greek god of medicine, symbolizing healing and renewal. This association remains today in the Rod of Asclepius, a medical symbol. Serpens is home to the Eagle Nebula (M16) and the famous Pillars of Creation.",
+        "fun_fact": "",
+        "image": "images\\serpens-cauda.jpg"
     },
     {
         "name": "Sextans",
