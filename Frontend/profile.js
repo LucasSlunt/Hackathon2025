@@ -31,6 +31,9 @@ async function loadUserProfile() {
             document.getElementById("uploadModal").style.display = "flex"; // Show modal
         });
 
+        // Fetch and display total points
+        await fetchTotalPoints(username); // Pass username as an argument
+
     } catch (error) {
         console.error("Error loading user profile:", error);
         document.getElementById("userProfile").innerHTML = "<p>Failed to load profile. Please try again.</p>";
@@ -143,7 +146,7 @@ async function searchUsers() {
     resultsContainer.innerHTML = "<p>Searching...</p>"; // Show loading state
 
     try {
-        // 🔥 Fetch users from new backend API
+        // Fetch users from new backend API
         
         const response = await fetch("http://localhost:8080/api/users");
         if (!response.ok) throw new Error("Failed to fetch users");
@@ -204,6 +207,20 @@ async function addFriend(friendUsername) {
     }
 }
 
+async function fetchTotalPoints(username) {
+    const totalPointsElement = document.querySelector(".total-points"); // Move this outside the try block
+
+    try {
+        const response = await fetch(`http://localhost:8080/api/users/${username}/total-points`);
+        if (!response.ok) throw new Error("Failed to fetch total points");
+
+        const totalPoints = await response.text(); // Parse the response as text (raw int)
+        totalPointsElement.textContent = `Total Points: ${totalPoints}`;
+    } catch (error) {
+        console.error("Error fetching total points:", error);
+        totalPointsElement.textContent = "Total Points: Error loading";
+    }
+}
 
 // Update Friend List
 // Update Friend List (Fetch from API)
