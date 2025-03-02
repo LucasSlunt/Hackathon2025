@@ -1,3 +1,4 @@
+
 const loadImageBase64 = (file) => {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -6,7 +7,7 @@ const loadImageBase64 = (file) => {
         reader.onerror = (error) => reject(error);
     });
 }
-
+let correctAnswer = "";
 
 // Get elements from the DOM
 //const fileInput = document.getElementById('fileInput');
@@ -26,7 +27,7 @@ const constellationDropdown = document.getElementById('constellationDropdown');
 const feedbackMessage = document.getElementById('feedbackMessage');
 const closeModalButton = document.getElementById('closeModal');
 
-let correctAnswer = "orion"; // Set correct answer for now
+
 
 uploadButton.addEventListener('click', () => {
     const file = fileInput.files[0];
@@ -46,6 +47,7 @@ submitGuessButton.addEventListener('click', () => {
     if (selectedAnswer === correctAnswer) {
         feedbackMessage.textContent = "+5 Points!";
         feedbackMessage.style.color = "green";
+        addPoints(5);
     } else {
         feedbackMessage.textContent = "Try again!";
         feedbackMessage.style.color = "red";
@@ -92,6 +94,28 @@ fileInput.addEventListener('change', function () {
     }
 });
 
+function getCookie(name) {
+    const cookies = document.cookie.split('; ');
+    for (let cookie of cookies) {
+        const [cookieName, cookieValue] = cookie.split('=');
+        if (cookieName === name) {
+            return decodeURIComponent(cookieValue);
+        }
+    }
+    return null; // Return null if not found
+}
+
+function addPoints(points) {
+    const usr = getCookie("username");
+    fetch(`http://localhost:8080/api/users/${usr}/add-points?points=${points}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    
+}
+
 async function runInf(){
     const input = document.getElementById("fileInput");
     if (!input.files.length) {
@@ -136,6 +160,7 @@ async function runInf(){
             ];
             document.getElementById("h3modal").innerHTML = "Constellation Found! +3 Points";
             document.getElementById("pmodal").innerHTML = "Guess the correct constellation:";
+            addPoints(3);
             const filteredConstellations = constellations.filter(name => name !== constellationName);
             const randomConstellations = filteredConstellations.sort(() => 0.5 - Math.random()).slice(0, 3);
             randomConstellations.push(constellationName);
