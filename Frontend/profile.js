@@ -62,6 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Close the modal when clicking the close button (X)
     closeModalBtn.addEventListener("click", () => {
         modal.style.display = "none";
+        closeUploadSelector();
+
     });
 
     // Close the modal when clicking outside of modal-content
@@ -70,6 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
             modal.style.display = "none";
         }
     });
+
+    
+    
+    
 
     /*
     Updating the profile picture here
@@ -90,6 +96,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("uploadImage").addEventListener("click", () => {
         profilePic.src = imagePreview.src;
         modal.style.display = "none"; 
+        
+
     });
 });
 
@@ -340,6 +348,7 @@ document.getElementById("viewFriends").addEventListener("click", openViewFriends
 document.querySelector("#addFriendModal .modal-close").addEventListener("click", closeAddFriendPopup);
 document.querySelector("#viewFriendsModal .modal-close").addEventListener("click", closeViewFriendsPopup);
 
+
 // Close modals when clicking outside of modal-content
 window.addEventListener("click", (event) => {
     if (event.target === document.getElementById("addFriendModal")) {
@@ -406,6 +415,12 @@ async function openTrophySelector() {
 function closeTrophySelector() {
     document.getElementById("trophyModal").style.display = "none";
 }
+
+function closeUploadSelector(){
+    document.getElementById("uploadModal").style.display = "none";
+}
+
+
 
 // Toggle Trophy Selection (Max 3)
 function toggleTrophySelection(trophy, element) {
