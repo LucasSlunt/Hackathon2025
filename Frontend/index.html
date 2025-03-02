@@ -6,6 +6,7 @@
 <html>
     <body class="container">
         <!-- link to PicoCSS styling cdn -->
+         <link rel="stylesheet" herf="index.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
         <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -21,5 +22,19 @@
               <div class="g-signin2" data-onsuccess="onSignIn"></div>
             </ul>
         </nav>
+
+        
+
+
+
+        <div class="upload-container">
+            <h1>Upload Picture</h1>
+            <input type="file" id="file-input" accept="image/*">
+            <p class="file-name">No file chosen</p>
+            <img id="image-preview" class="image-preview">
+            <button class="submit-btn" id="submit-btn">Submit</button>
+        </div>
+    
+        <script src="index.js"></script>
     </body>
 </html>
