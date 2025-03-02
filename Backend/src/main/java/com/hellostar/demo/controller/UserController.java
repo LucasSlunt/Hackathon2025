@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -60,12 +61,17 @@ public class UserController {
         return userService.getFavoriteLocations(username);
     }
 
+    @GetMapping
+    public List<User> getAllUsers() {
+        return userService.getAllUsers();
+    }
+
      @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody Map<String, String> credentials) {
         String username = credentials.get("username");
         String password = credentials.get("password");
 
-        Optional<User> user = userService.getUserByUsername(username);
+        Optional<User> user = Optional.ofNullable(userService.getUserByUsername(username));
         
         if (user.isPresent() && user.get().getPassword().equals(password)) {
             return ResponseEntity.ok(user.get()); // ✅ Return user details if login is correct
