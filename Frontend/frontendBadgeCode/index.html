@@ -6,8 +6,7 @@
   <title>Badge with Constellation</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body onload="giveBadgeMeat('1')">
-
+<body>
   <div class="badge-container">
     <!-- SVG Badge -->
     <svg id="badge-svg" viewBox="0 0 252.43 241.47">
@@ -28,11 +27,15 @@
     </svg>
 
     <!-- Constellation Image -->
-    <div id="inner-badge-image">
-      <img src="" alt="Constellation">
+    <div class="constellation-image" >
+      <img id="inner-badge-image" src="C:\Users\slunt\UniversityStuff\UBC_Year_3\Hackathon2025\Frontend\badgeGraphics\innerBadgeGraphics\constellation.jpg" alt="Constellation">
     </div>
   </div>
+  <h3 onclick="setImage('C:/Users/slunt/UniversityStuff/UBC_Year_3/Hackathon2025/Frontend/badgeGraphics/innerBadgeGraphics/terraria.jpg')">change the badge</h3>
+  <label for="fname">image path</label>
+  <input type="text" id="fname" name="fname"> 
 
-  <script src="script.js"></script>
+  <button onclick=createBadge(2,fname.value)>aweom</button>
+  <script src="badgeScript.js"></script>
 </body>
 </html>
