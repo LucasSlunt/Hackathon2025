@@ -81,60 +81,112 @@ function closeViewFriendsPopup() {
 }
 
 // Search Users
-function searchUsers() {
+// Fetch and Search Users from API
+// Fetch and Search Users from Spring Boot API
+async function searchUsers() {
     const searchInput = document.getElementById("friendSearch").value.toLowerCase();
     const resultsContainer = document.getElementById("searchResults");
-    resultsContainer.innerHTML = ""; // Clear previous results
+    resultsContainer.innerHTML = "<p>Searching...</p>"; // Show loading state
 
-    const filteredUsers = allUsers.filter(user => user.username.toLowerCase().includes(searchInput));
+    try {
+        // 🔥 Fetch users from new backend API
+        const response = await fetch("http://localhost:8080/api/users");
+        if (!response.ok) throw new Error("Failed to fetch users");
 
-    if (filteredUsers.length === 0) {
-        resultsContainer.innerHTML = "<p>No users found.</p>";
-    } else {
-        filteredUsers.forEach(user => {
-            const userItem = document.createElement("div");
-            userItem.classList.add("user-item");
+        const allUsers = await response.json(); // Get JSON response
 
-            userItem.innerHTML = `
-                <span>${user.username}</span>
-                <button class="add-friend-btn" onclick="addFriend(${user.id})">Add</button>
-            `;
+        resultsContainer.innerHTML = ""; // Clear loading message
 
-            resultsContainer.appendChild(userItem);
-        });
+        // Filter users based on search input
+        const filteredUsers = allUsers.filter(user =>
+            user.username.toLowerCase().includes(searchInput)
+        );
+
+        if (filteredUsers.length === 0) {
+            resultsContainer.innerHTML = "<p>No users found.</p>";
+        } else {
+            filteredUsers.forEach(user => {
+                const userItem = document.createElement("div");
+                userItem.classList.add("user-item");
+
+                userItem.innerHTML = `
+                    <span>${user.username}</span>
+                    <button class="add-friend-btn" onclick="addFriend('${user.id}')">Add</button>
+                `;
+
+                resultsContainer.appendChild(userItem);
+            });
+        }
+    } catch (error) {
+        console.error("Error fetching users:", error);
+        resultsContainer.innerHTML = "<p>Could not load users. Please try again.</p>";
     }
 }
+
 
 // Add Friend
-function addFriend(userId) {
-    const userToAdd = allUsers.find(user => user.id === userId);
-    if (userToAdd && !friends.some(friend => friend.id === userId)) {
-        friends.push(userToAdd);
-        alert(`${userToAdd.username} has been added as a friend!`);
+// Add Friend (Now Saves to Database)
+async function addFriend(username) {
+    try {
+        const response = await fetch(`http://localhost:8080/api/users/Alice/addFriend/Gru`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" }
+        });
+
+        if (!response.ok) throw new Error("Failed to add friend");
+
+        updateFriendList();
+        alert("Friend request sent!");
+    } catch (error) {
+        console.error("Error adding friend:", error);
+        alert("Could not add friend. Please try again.");
     }
 }
+
 
 // Update Friend List
-function updateFriendList() {
+// Update Friend List (Fetch from API)
+async function updateFriendList() {
     const friendListContainer = document.getElementById("friendList");
-    friendListContainer.innerHTML = ""; // Clear previous list
+    
+    if (!friendListContainer) {
+        console.error("Friend list container not found!");
+        return;
+    }
 
-    if (friends.length === 0) {
-        friendListContainer.innerHTML = "<p>You have no friends yet.</p>";
-    } else {
-        friends.forEach(friend => {
-            const friendItem = document.createElement("div");
-            friendItem.classList.add("user-item");
+    friendListContainer.innerHTML = "<p>Loading friends...</p>"; // Show loading state
 
-            friendItem.innerHTML = `
-                <span>${friend.username}</span>
-                <button class="add-friend-btn" onclick="viewFriendProfile('${friend.username}')">View</button>
-            `;
+    try {
+        // 🔹 Fetch the real friend list (Replace 'Alice' dynamically if needed)
+        const response = await fetch("http://localhost:8080/api/users/Alice/friends");
 
-            friendListContainer.appendChild(friendItem);
-        });
+        if (!response.ok) throw new Error("Failed to fetch friends");
+
+        const friends = await response.json(); // Store fetched data
+
+        friendListContainer.innerHTML = ""; // Clear loading state
+
+        if (friends.length === 0) {
+            friendListContainer.innerHTML = "<p>You have no friends yet.</p>";
+        } else {
+            friends.forEach(friend => {
+                const friendItem = document.createElement("div");
+                friendItem.classList.add("user-item");
+
+                friendItem.innerHTML = `
+                    <span>${friend.username}</span>
+                    <button class="view-profile-btn" onclick="viewFriendProfile('${friend.username}')">View Profile</button>
+                `;
+
+                friendListContainer.appendChild(friendItem);
+            });
+        }
+    } catch (error) {
+        console.error("Error fetching friends:", error);
+        friendListContainer.innerHTML = "<p>Could not load friends. Please try again.</p>";
     }
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const profileModal = document.getElementById("friendProfileModal");
