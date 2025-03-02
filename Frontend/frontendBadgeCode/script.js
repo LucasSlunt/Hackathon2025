@@ -1,69 +1,64 @@
 // script.js
-document.addEventListener("DOMContentLoaded", function () {
-  const badgeForm = document.getElementById("badge-form");
+
+//changing the colour of the bage based on the provided level
+function giveBadgeMeat(badgeLevel){
+if (badgeLevel == 1){
+  document.getElementById("badge-svg").classList.replace("badge-colour-1","badge-bronze-1");
+  document.getElementById("badge-svg").classList.replace("badge-colour-2","badge-bronze-2")
+  document.getElementById("badge-svg").classList.replace("badge-colour-3","badge-bronze-3")
+}else if (badgeLevel == 2){
+  document.getElementById("badge-svg").classList.replace("badge-colour-1","badge-silver-1");
+  document.getElementById("badge-svg").classList.replace("badge-colour-2","badge-silver-2")
+  document.getElementById("badge-svg").classList.replace("badge-colour-3","badge-silver-3")
+}else if (badgeLevel == 3){
+  document.getElementById("badge-svg").classList.replace("badge-colour-1","badge-gold-1");
+  document.getElementById("badge-svg").classList.replace("badge-colour-2","badge-gold-2")
+  document.getElementById("badge-svg").classList.replace("badge-colour-3","badge-gold-3")
+}
+
+document.getElementById("inner-badge-image").src="C:\Users\slunt\UniversityStuff\UBC_Year_3\Hackathon2025\Frontend\badgeGraphics\innerBadgeGraphics\constellation.jpg";
+}
+//ai stuff
+/*document.addEventListener("DOMContentLoaded", function () {
   const badgeName = document.getElementById("badge-name");
   const badgeDescription = document.getElementById("badge-description");
   const badgeLevel = document.getElementById("level-value");
   const badgeInnerImage = document.getElementById("badge-inner-image");
   const badgeSvg = document.getElementById("badge-svg");
-  const saveBadgeBtn = document.getElementById("save-badge-btn");
+  const badgeIdInput = document.getElementById("badge-id");
+  const loadBadgeBtn = document.getElementById("load-badge-btn");
 
-  let currentBadge = {
-    name: "",
-    description: "",
-    level: 1,
-    innerImagePath: "",
-  };
+  // Load badge data when the button is clicked
+  loadBadgeBtn.addEventListener("click", function () {
+    const badgeId = badgeIdInput.value;
+    if (badgeId) {
+      fetch(`/api/badges/${badgeId}`)
+        .then((response) => response.json())
+        .then((data) => {
+          // Update badge details
+          badgeName.textContent = data.name;
+          badgeDescription.textContent = data.description;
+          badgeLevel.textContent = data.level;
 
-  // Update badge preview when the form is submitted
-  badgeForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+          // Update inner image
+          badgeInnerImage.src = data.innerImagePath;
 
-    // Get form data
-    currentBadge.name = document.getElementById("name").value;
-    currentBadge.description = document.getElementById("description").value;
-    currentBadge.level = parseInt(document.getElementById("level").value);
-    currentBadge.innerImagePath = document.getElementById("inner-image-path").value;
-
-    // Update badge display
-    badgeName.textContent = currentBadge.name;
-    badgeDescription.textContent = currentBadge.description;
-    badgeLevel.textContent = currentBadge.level;
-    badgeInnerImage.src = currentBadge.innerImagePath;
-
-    // Update badge color based on level
-    const badgeColorClass = badgeSvg.querySelector(".cls-2");
-    if (currentBadge.level === 1) {
-      badgeColorClass.setAttribute("fill", "#cc852d"); // Bronze
-    } else if (currentBadge.level === 2) {
-      badgeColorClass.setAttribute("fill", "#c0c0c0"); // Silver
-    } else if (currentBadge.level === 3) {
-      badgeColorClass.setAttribute("fill", "#ffd700"); // Gold
+          // Update badge color based on level
+          const badgeColorClass = badgeSvg.querySelector(".cls-2");
+          if (data.level === 1) {
+            badgeColorClass.setAttribute("fill", "#cc852d"); // Bronze
+          } else if (data.level === 2) {
+            badgeColorClass.setAttribute("fill", "#c0c0c0"); // Silver
+          } else if (data.level === 3) {
+            badgeColorClass.setAttribute("fill", "#ffd700"); // Gold
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching badge data:", error);
+          alert("Failed to load badge. Please check the badge ID.");
+        });
+    } else {
+      alert("Please enter a valid badge ID.");
     }
   });
-
-  // Save badge to the database
-  saveBadgeBtn.addEventListener("click", function () {
-    fetch("/api/badges", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: new URLSearchParams({
-        name: currentBadge.name,
-        description: currentBadge.description,
-        level: currentBadge.level,
-        innerImagePath: currentBadge.innerImagePath,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        alert("Badge saved successfully!");
-        console.log("Saved badge:", data);
-      })
-      .catch((error) => {
-        console.error("Error saving badge:", error);
-        alert("Failed to save badge.");
-      });
-  });
-});
+});*/
