@@ -1,12 +1,9 @@
 package com.hellostar.demo.controller;
 
 import com.hellostar.demo.entity.Badge;
-import com.hellostar.demo.entity.UserBadge;
 import com.hellostar.demo.service.BadgeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/badges")
@@ -17,31 +14,29 @@ public class BadgeController {
 
     // Endpoint to create a new badge
     @PostMapping
-    public Badge createBadge(@RequestParam String name, @RequestParam String description) {
-        return badgeService.createBadge(name, description);
+    public Badge createBadge(
+            @RequestParam String name,
+            @RequestParam String description,
+            @RequestParam int level,
+            @RequestParam String innerImagePath) {
+        return badgeService.createBadge(name, description, level, innerImagePath);
     }
 
-    // Endpoint to assign a badge to a user
-    @PostMapping("/assign")
-    public UserBadge assignBadgeToUser(@RequestParam String username, @RequestParam Long badgeId) {
-        return badgeService.assignBadgeToUser(username, badgeId);
+    // Endpoint to update a badge's level
+    @PutMapping("/{badgeId}/level")
+    public Badge updateBadgeLevel(@PathVariable Long badgeId, @RequestParam int level) {
+        return badgeService.updateBadgeLevel(badgeId, level);
     }
 
-    // Endpoint to get all badges for a user
-    @GetMapping("/user/{username}")
-    public List<UserBadge> getUserBadges(@PathVariable String username) {
-        return badgeService.getUserBadges(username);
+    // Endpoint to update a badge's inner image path
+    @PutMapping("/{badgeId}/inner-image")
+    public Badge updateBadgeInnerImagePath(@PathVariable Long badgeId, @RequestParam String innerImagePath) {
+        return badgeService.updateBadgeInnerImagePath(badgeId, innerImagePath);
     }
 
-    // Endpoint to get badges displayed on a user's profile
-    @GetMapping("/user/{username}/displayed")
-    public List<UserBadge> getDisplayedBadges(@PathVariable String username) {
-        return badgeService.getDisplayedBadges(username);
-    }
-
-    // Endpoint to toggle whether a badge is displayed on a user's profile
-    @PutMapping("/{userBadgeId}/display")
-    public UserBadge toggleBadgeDisplay(@PathVariable Long userBadgeId, @RequestParam boolean isDisplayed) {
-        return badgeService.toggleBadgeDisplay(userBadgeId, isDisplayed);
+    // Endpoint to get a badge by ID
+    @GetMapping("/{badgeId}")
+    public Badge getBadgeById(@PathVariable Long badgeId) {
+        return badgeService.getBadgeById(badgeId);
     }
 }
