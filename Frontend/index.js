@@ -134,6 +134,8 @@ async function runInf(){
                 "taurus",
                 "ursa_major"
             ];
+            document.getElementById("h3modal").innerHTML = "Constellation Found! +3 Points";
+            document.getElementById("pmodal").innerHTML = "Guess the correct constellation:";
             const filteredConstellations = constellations.filter(name => name !== constellationName);
             const randomConstellations = filteredConstellations.sort(() => 0.5 - Math.random()).slice(0, 3);
             randomConstellations.push(constellationName);
@@ -145,6 +147,8 @@ async function runInf(){
             //choose 3-4 random constellations along with the correct one
         } else {
             console.log("No constellation detected.");
+            document.getElementById("h3modal").innerHTML = "No constellation detected";
+            document.getElementById("pmodal").innerHTML = "Try another image!";
             //choose no constellation detected modal
         }
     })
