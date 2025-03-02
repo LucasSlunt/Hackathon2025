@@ -136,10 +136,62 @@ function updateFriendList() {
     }
 }
 
-// View Friend Profile (Placeholder)
-function viewFriendProfile(username) {
-    alert(`Viewing profile of ${username}`);
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const profileModal = document.getElementById("friendProfileModal");
+    const closeProfileModal = document.getElementById("closeProfileModal");
+    const friendName = document.getElementById("friendName");
+    const friendProfilePic = document.getElementById("friendProfilePic");
+    const friendUsername = document.getElementById("friendUsername");
+
+    // Ensure the modal exists
+    if (!profileModal) {
+        console.error("Profile modal not found!");
+        return;
+    }
+
+    // Function to open the friend profile popup
+    function viewFriendProfile(username, imageUrl) {
+        console.log(`Opening profile for: ${username}`); // Debugging log
+        friendName.textContent = username;
+        friendUsername.textContent = "@" + username.toLowerCase().replace(" ", "");
+        friendProfilePic.src = imageUrl;
+
+        profileModal.style.display = "flex"; // Show the modal
+    }
+
+    // Attach event listener to dynamically generated buttons
+    function attachViewProfileListeners() {
+        document.querySelectorAll(".viewProfileBtn").forEach(button => {
+            button.addEventListener("click", function () {
+                const username = this.getAttribute("data-username");
+                const imageUrl = this.getAttribute("data-image");
+
+                if (username && imageUrl) {
+                    viewFriendProfile(username, imageUrl);
+                } else {
+                    console.error("Username or Image URL missing!");
+                }
+            });
+        });
+    }
+
+    // Close modal when clicking the close button
+    closeProfileModal.addEventListener("click", () => {
+        profileModal.style.display = "none";
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener("click", (event) => {
+        if (event.target === profileModal) {
+            profileModal.style.display = "none";
+        }
+    });
+
+    // Attach the function globally so it can be called from HTML
+    window.viewFriendProfile = viewFriendProfile;
+    attachViewProfileListeners();
+});
+
 
 // Attach Event Listeners
 document.getElementById("addFriend").addEventListener("click", openAddFriendPopup);
