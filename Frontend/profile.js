@@ -167,6 +167,7 @@ async function addFriend(friendUsername) {
 // Update Friend List
 // Update Friend List (Fetch from API)
 async function updateFriendList() {
+    cookiedUsername = readCookie("username");
     const friendListContainer = document.getElementById("friendList");
     
     if (!friendListContainer) {
@@ -179,10 +180,25 @@ async function updateFriendList() {
     try {
         
         // 🔹 Fetch the real friend list (Replace 'Alice' dynamically if needed)
-        const response = await fetch("http://localhost:8080/api/users/Alice/friends");
+        const response = await fetch(`http://localhost:8080/api/users/${cookiedUsername}/friends`);
 
         if (!response.ok) throw new Error("Failed to fetch friends");
+        const responseText = await response.text(); // Read raw response
+        console.log("Raw response:", responseText); // Debugging log
 
+        let friendsData;
+        try {
+            friendsData = JSON.parse(responseText);
+        } catch (jsonError) {
+            throw new Error(`Invalid JSON format from API: ${jsonError.message}`);
+        }
+
+        console.log("Parsed JSON:", friendsData); // Check JSON structure
+
+        // Ensure response is in the correct format
+        if (!friendsData || !Array.isArray(friendsData.friends)) {
+            throw new Error("Unexpected API response format");
+        }
         const friends = await response.json(); // Store fetched data
 
         friendListContainer.innerHTML = ""; // Clear loading state
