@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <title>Profile</title>
+       <script defer src="profile.js"></script> <!-- Ensure JavaScript loads properly -->
+    </head>
+    <body class="container">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="profile.css">
+
+        <nav>
+            <ul>
+                <li><strong><span class="iconify" data-icon="stash:stars"></span>Hello, Stars!</strong></li>
+            </ul>
+            <ul>
+                <li><button onclick="window.location.href='map.html'">Map</button></li>
+                <li><button onclick="window.location.href='index.html'">Home</button></li>
+                <li><button onclick="window.location.href='constellations.html'">Constellations</button></li>
+            </ul>
+        </nav>
+
+        <div class="user">
+            <img id="profile-pic" src="https://robohash.org/jackson.png?size=100x100" alt="Jackson">
+            <div class="user-info">
+                <h3>Jackson</h3>
+                <p>jackson_username</p>
+                <button id="openChangeProfile">Change Profile Image</button>                
+            </div>
+
+            <div class="friend-actions">
+                <button id="addFriend">Add Friend</button>
+                <button id="viewFriends">View Friend List</button>
+            </div>
+        </div>
+          
+        <!-- Profile Image Upload Modal -->
+        <div id="uploadModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>Upload Profile Picture</h3>
+                
+                <!-- Image Preview -->
+                <img id="imagePreview" src="https://robohash.org/default.png?size=100x100" alt="Profile Preview">
+
+                <!-- File Upload -->
+                <input type="file" id="fileInput" accept="image/*">
+
+                <!-- Upload Button -->
+                <button id="uploadImage">Save</button>
+            </div>
+        </div>
+
+        <div class="profile-stats">
+            <div class="stat-box">
+                <h4>Friends</h4>
+                <p id="friend-count">0</p>
+            </div>
+            <div class="stat-box">
+                <h4>Constellations Logged</h4>
+                <p id="logged-count">0</p>
+            </div>
+            <div class="stat-box">
+                <h4>Nights Stargazing</h4>
+                <p id="nights-count">0</p>
+            </div>
+        </div>
+
+        <!-- Profile Trophies Section -->
+        <div class="profile-trophies">
+            <h3>Top Badges</h3>
+            <div id="selected-trophies" class="trophy-display">
+                <p>Select up to 3 badges.</p>
+            </div>
+            <button class="customize-btn" onclick="openTrophySelector()">Customize Displayed Badges</button>
+        </div>
+
+        <!-- Trophy Selection Modal -->
+        <div id="trophyModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeTrophySelector()">&times;</span>
+                <h3>Select Your Top 3 Trophies</h3>
+                <div id="all-trophies" class="trophy-list">
+                    <!-- Dynamically loaded trophies appear here -->
+                </div>
+                <button id="saveTrophies" onclick="saveSelectedTrophies()">Save</button>
+            </div>
+        </div>
+
+        <!-- Add Friend Popup -->
+        <div id="addFriendModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" onclick="closeViewFriendsPopup()">&times;</span>
+                <h3>Add a Friend</h3>
+                
+                <!-- Search Bar -->
+                <input type="text" id="friendSearch" placeholder="Search username..." onkeyup="searchUsers()">
+                
+                <!-- Search Results -->
+                <div id="searchResults" class="user-list">
+                    <!-- Search results will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- View Friends Popup -->
+        <div id="viewFriendsModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeViewFriendsPopup()">&times;</span>
+                <h3>Your Friends</h3>
+                
+                <div id="friendList" class="user-list">
+                    <div class="friend">
+                        <p><strong>John Doe</strong></p>
+                        <button class="viewProfileBtn" data-username="John Doe" data-image="https://robohash.org/johndoe.png?size=100x100">View Profile</button>
+                    </div>
+                    <div class="friend">
+                        <p><strong>Jane Smith</strong></p>
+                        <button class="viewProfileBtn" data-username="Jane Smith" data-image="https://robohash.org/janesmith.png?size=100x100">View Profile</button>
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+        <!-- Friend Profile Popup Modal -->
+        <div id="friendProfileModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="closeProfileModal">&times;</span>
+                <h3 id="friendName">Friend Profile</h3>
+                <img id="friendProfilePic" src="">
+                <p id="friendUsername"></p>
+
+                <div class="profile-stats">
+                    <div class="stat-box">
+                        <h4>Friends</h4>
+                        <p id="friend-count">0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Constellations Logged</h4>
+                        <p id="logged-count">0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Nights Stargazing</h4>
+                        <p id="nights-count">0</p>
+                    </div>
+                </div>
+        
+                <!-- Profile Trophies Section -->
+                <div class="profile-trophies">
+                    <h3>Top Badges</h3>
+                    <div id="selected-trophies" class="trophy-display">
+                        <!-- THeir badges -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
