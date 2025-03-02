@@ -45,6 +45,89 @@
     transform: scale(1.05);
 }
 
+/* Friend Actions Section (Right Side) */
+.friend-actions {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: right;
+    margin-left: 50px;
+    gap: 10px;
+}
+
+/* Friend Buttons */
+.friend-actions button {
+    background-color: #c89bfc;
+    color: #13171f;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.friend-actions button:hover {
+    transform: scale(1.05);
+}
+
+/* Search Bar */
+#friendSearch {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+/* User List */
+.user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Individual User Box */
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Add Friend Button */
+.add-friend-btn {
+    background-color: #c89bfc;
+    color: #13171f;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-friend-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Close Button for Modals */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #bdbdbd;
+}
+
+.modal-close:hover {
+    color: #c89bfc;
+}
+
 /* Stats Section */
 .profile-stats {
     display: flex;
@@ -87,11 +170,11 @@
 }
 
 /* Trophy Grid */
-.trophy-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin: 10px 0;
+.trophy-list:empty {
+    display: flex; /* Change grid to flex when empty */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100px; /* Adjust as needed */
 }
 
 /* Trophy Item */
@@ -119,9 +202,19 @@
 /* Selected Trophy Display */
 .trophy-display {
     display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
     gap: 10px;
     padding: 10px;
-    flex-wrap: wrap;
+    text-align: center;
+    width: 100%; /* Ensures it takes full width */
+}
+
+.trophy-display p {
+    text-align: center;
+    width: 100%; /* Ensures the text uses full width */
+    margin-bottom: 10px;
 }
 
 .trophy-display .trophy {
@@ -145,23 +238,32 @@
 
 /* Popup Content */
 .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers child elements like h3 */
     background-color: #1e1e1e;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 300px;
+    width: 400px;
+}
+
+.modal-content h3 {
+    text-align: center; /* Ensures text is centered */
+    width: 100%; /* Expands full width for proper alignment */
+    margin: 0 auto; /* Ensures no margin issues */
+    margin-bottom: 15px;
 }
 
 .modal-content button {
     background-color: #c89bfc;
     color: #13171f;
-    width: 150px;
     height: 40px;
     border: 2px solid transparent;
     display: flex;
     justify-content: center; /* Centers text horizontally */
-    align-items: center; /* Centers text vertically */
-    margin: 10px auto; /* Ensures button stays centered in the modal */
+    align-items: right; /* Centers text vertically */
+    margin-left: 70px;
 }
 
 .modal-content button:hover {
@@ -169,16 +271,20 @@
 }
 
 .no-trophies-message {
-    text-align: center;
+    display: block; /* Ensure it behaves as a block element */
+    width: 100%; /* Allows text-align to work properly */
+    text-align: center; /* Centers text horizontally */
     color: #bdbdbd;
-    font-size: 10px;
+    font-size: 14px;
     font-style: italic;
     margin-top: 10px;
 }
 
 /* Close Button */
 .close-btn {
-    float: right;
+    position: absolute;
+    top: 10px;  /* Distance from top */
+    right: 10px; /* Distance from right */
     font-size: 24px;
     cursor: pointer;
     color: #bdbdbd;
@@ -187,6 +293,7 @@
 .close-btn:hover {
     color: #c89bfc;
 }
+
 
 /* Image Preview */
 #imagePreview {

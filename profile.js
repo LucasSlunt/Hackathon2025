@@ -48,6 +48,119 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Dummy user data (Replace with API calls later)
+const allUsers = [
+    { id: 1, username: "stargazer123" },
+    { id: 2, username: "cosmic_journey" },
+    { id: 3, username: "galaxyexplorer" },
+    { id: 4, username: "astrolover" },
+    { id: 5, username: "nebula_hunter" }
+];
+
+let friends = []; // Store added friends
+
+// Open "Add Friend" Popup
+function openAddFriendPopup() {
+    document.getElementById("addFriendModal").style.display = "flex";
+}
+
+// Close "Add Friend" Popup
+function closeAddFriendPopup() {
+    document.getElementById("addFriendModal").style.display = "none";
+}
+
+// Open "View Friends" Popup
+function openViewFriendsPopup() {
+    document.getElementById("viewFriendsModal").style.display = "flex";
+    updateFriendList();
+}
+
+// Close "View Friends" Popup
+function closeViewFriendsPopup() {
+    document.getElementById("viewFriendsModal").style.display = "none";
+}
+
+// Search Users
+function searchUsers() {
+    const searchInput = document.getElementById("friendSearch").value.toLowerCase();
+    const resultsContainer = document.getElementById("searchResults");
+    resultsContainer.innerHTML = ""; // Clear previous results
+
+    const filteredUsers = allUsers.filter(user => user.username.toLowerCase().includes(searchInput));
+
+    if (filteredUsers.length === 0) {
+        resultsContainer.innerHTML = "<p>No users found.</p>";
+    } else {
+        filteredUsers.forEach(user => {
+            const userItem = document.createElement("div");
+            userItem.classList.add("user-item");
+
+            userItem.innerHTML = `
+                <span>${user.username}</span>
+                <button class="add-friend-btn" onclick="addFriend(${user.id})">Add</button>
+            `;
+
+            resultsContainer.appendChild(userItem);
+        });
+    }
+}
+
+// Add Friend
+function addFriend(userId) {
+    const userToAdd = allUsers.find(user => user.id === userId);
+    if (userToAdd && !friends.some(friend => friend.id === userId)) {
+        friends.push(userToAdd);
+        alert(`${userToAdd.username} has been added as a friend!`);
+    }
+}
+
+// Update Friend List
+function updateFriendList() {
+    const friendListContainer = document.getElementById("friendList");
+    friendListContainer.innerHTML = ""; // Clear previous list
+
+    if (friends.length === 0) {
+        friendListContainer.innerHTML = "<p>You have no friends yet.</p>";
+    } else {
+        friends.forEach(friend => {
+            const friendItem = document.createElement("div");
+            friendItem.classList.add("user-item");
+
+            friendItem.innerHTML = `
+                <span>${friend.username}</span>
+                <button class="add-friend-btn" onclick="viewFriendProfile('${friend.username}')">View</button>
+            `;
+
+            friendListContainer.appendChild(friendItem);
+        });
+    }
+}
+
+// View Friend Profile (Placeholder)
+function viewFriendProfile(username) {
+    alert(`Viewing profile of ${username}`);
+}
+
+// Attach Event Listeners
+document.getElementById("addFriend").addEventListener("click", openAddFriendPopup);
+document.getElementById("viewFriends").addEventListener("click", openViewFriendsPopup);
+
+// Attach Close Button Event Listeners
+document.querySelector("#addFriendModal .modal-close").addEventListener("click", closeAddFriendPopup);
+document.querySelector("#viewFriendsModal .modal-close").addEventListener("click", closeViewFriendsPopup);
+
+// Close modals when clicking outside of modal-content
+window.addEventListener("click", (event) => {
+    if (event.target === document.getElementById("addFriendModal")) {
+        closeAddFriendPopup();
+    }
+    if (event.target === document.getElementById("viewFriendsModal")) {
+        closeViewFriendsPopup();
+    }
+});
+
+
+
 let selectedTrophies = [];
 
 // Simulated fetch function (replace this when backend is ready)

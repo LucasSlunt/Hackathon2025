@@ -23,8 +23,13 @@
             <img id="profile-pic" src="https://robohash.org/jackson.png?size=100x100" alt="Jackson">
             <div class="user-info">
                 <h3>Jackson</h3>
-                <p>Stargazing Enthusiast</p>
+                <p>jackson_username</p>
                 <button id="openChangeProfile">Change Profile Image</button>                
+            </div>
+
+            <div class="friend-actions">
+                <button id="addFriend">Add Friend</button>
+                <button id="viewFriends">View Friend List</button>
             </div>
         </div>
           
@@ -62,11 +67,11 @@
 
         <!-- Profile Trophies Section -->
         <div class="profile-trophies">
-            <h3>Top Trophies</h3>
+            <h3>Top Badges</h3>
             <div id="selected-trophies" class="trophy-display">
-                <p>Select up to 3 trophies.</p>
+                <p>Select up to 3 badges.</p>
             </div>
-            <button class="customize-btn" onclick="openTrophySelector()">Customize Displayed Trophies</button>
+            <button class="customize-btn" onclick="openTrophySelector()">Customize Displayed Badges</button>
         </div>
 
         <!-- Trophy Selection Modal -->
@@ -80,5 +85,35 @@
                 <button id="saveTrophies" onclick="saveSelectedTrophies()">Save</button>
             </div>
         </div>
+
+        <!-- Add Friend Popup -->
+        <div id="addFriendModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" onclick="closeViewFriendsPopup()">&times;</span>
+                <h3>Add a Friend</h3>
+                
+                <!-- Search Bar -->
+                <input type="text" id="friendSearch" placeholder="Search username..." onkeyup="searchUsers()">
+                
+                <!-- Search Results -->
+                <div id="searchResults" class="user-list">
+                    <!-- Search results will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- View Friends Popup -->
+        <div id="viewFriendsModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeViewFriendsPopup()">&times;</span>
+                <h3>Your Friends</h3>
+                
+                <!-- Friend List -->
+                <div id="friendList" class="user-list">
+                    <!-- Friend list will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>
