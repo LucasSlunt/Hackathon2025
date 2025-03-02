@@ -80,6 +80,18 @@ function closeViewFriendsPopup() {
     document.getElementById("viewFriendsModal").style.display = "none";
 }
 
+//given the name of the cookie (username) returns value
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
 // Search Users
 // Fetch and Search Users from API
 // Fetch and Search Users from Spring Boot API
@@ -90,9 +102,10 @@ async function searchUsers() {
 
     try {
         // 🔥 Fetch users from new backend API
+        
         const response = await fetch("http://localhost:8080/api/users");
         if (!response.ok) throw new Error("Failed to fetch users");
-
+        
         const allUsers = await response.json(); // Get JSON response
 
         resultsContainer.innerHTML = ""; // Clear loading message
@@ -111,7 +124,7 @@ async function searchUsers() {
 
                 userItem.innerHTML = `
                     <span>${user.username}</span>
-                    <button class="add-friend-btn" onclick="addFriend('${user.id}')">Add</button>
+                    <button class="add-friend-btn" onclick="addFriend('${user.username}')">Add</button>
                 `;
 
                 resultsContainer.appendChild(userItem);
@@ -126,9 +139,10 @@ async function searchUsers() {
 
 // Add Friend
 // Add Friend (Now Saves to Database)
-async function addFriend(username) {
+async function addFriend(friendUsername) {
+    cookiedUsername = readCookie("username");
     try {
-        const response = await fetch(`http://localhost:8080/api/users/Alice/addFriend/Gru`, {
+        const response = await fetch(`http://localhost:8080/api/users/${cookiedUsername}/addFriend/${friendUsername}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" }
         });
