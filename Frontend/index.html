@@ -111,16 +111,19 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter password" required>
 
-                    <button type="submit">Login</button>
+                    <button type="submit" onclick="setCookie()">Login</button>
                     <p id="errorMessage" style="color: red; display: none;">Invalid username or password.</p>
                 </form>
             </div>
         </div>
 
         <script>
-            function setCookie(name) {
-            document.cookie = username.value + "=" + name;
-            }
+            function setCookie() {
+                const d = new Date();
+                d.setTime(d.getTime() + (100*24*60*60*1000));
+                let expires = "expires="+ d.toUTCString();
+                document.cookie = "username=" + username.value + ";" + expires + ";path=/";
+                }
         </script>
 
         <script>
