@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.badge-container {
+  position: relative;
+  width: 300px; /* Adjust size as needed */
+  height: 300px; /* Adjust size as needed */
+}
+
+.constellation-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -46%);
+  width: 67%; /* Adjust size to fit inside the inner circle */
+  height: 67%; /* Adjust size to fit inside the inner circle */
+  border-radius: 50%; /* Make the image circular */
+  overflow: hidden; /* Ensure the image stays within the circle */
+}
+
+.constellation-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the circle */
+}
+
+#badge-svg {
+  width: 100%;
+  height: 100%;
+}
