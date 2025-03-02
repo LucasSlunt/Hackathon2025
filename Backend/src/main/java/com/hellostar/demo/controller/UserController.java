@@ -14,36 +14,46 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    // Endpoint to set the profile picture for a user
-    @PutMapping("/{userId}/profile-pic")
-    public User setProfilePic(@PathVariable Long userId, @RequestParam String profilePic) {
-        return userService.setProfilePic(userId, profilePic);
+    // Endpoint to add points to a user's totalPoints
+    @PutMapping("/{username}/add-points")
+    public User addPoints(@PathVariable String username, @RequestParam int points) {
+        return userService.addPoints(username, points);
     }
 
-    // Endpoint to get the profile picture for a user
-    @GetMapping("/{userId}/profile-pic")
-    public String getProfilePic(@PathVariable Long userId) {
-        return userService.getProfilePic(userId);
+    // Endpoint to get a user's totalPoints
+    @GetMapping("/{username}/total-points")
+    public int getTotalPoints(@PathVariable String username) {
+        return userService.getTotalPoints(username);
     }
 
-    // Existing endpoints for friends and favorite locations
-    @PostMapping("/{userId}/friends/{friendId}")
-    public User addFriend(@PathVariable Long userId, @PathVariable Long friendId) {
-        return userService.addFriend(userId, friendId);
+    // Existing endpoints for profile picture, friends, and favorite locations
+    @PutMapping("/{username}/profile-pic")
+    public User setProfilePic(@PathVariable String username, @RequestParam String profilePic) {
+        return userService.setProfilePic(username, profilePic);
     }
 
-    @GetMapping("/{userId}/friends")
-    public Set<User> getFriends(@PathVariable Long userId) {
-        return userService.getFriends(userId);
+    @GetMapping("/{username}/profile-pic")
+    public String getProfilePic(@PathVariable String username) {
+        return userService.getProfilePic(username);
     }
 
-    @PostMapping("/{userId}/favorite-locations/{locationId}")
-    public User addFavoriteLocation(@PathVariable Long userId, @PathVariable Long locationId) {
-        return userService.addFavoriteLocation(userId, locationId);
+    @PostMapping("/{username}/friends/{friendUsername}")
+    public User addFriend(@PathVariable String username, @PathVariable String friendUsername) {
+        return userService.addFriend(username, friendUsername);
     }
 
-    @GetMapping("/{userId}/favorite-locations")
-    public Set<Long> getFavoriteLocations(@PathVariable Long userId) {
-        return userService.getFavoriteLocations(userId);
+    @GetMapping("/{username}/friends")
+    public Set<User> getFriends(@PathVariable String username) {
+        return userService.getFriends(username);
+    }
+
+    @PostMapping("/{username}/favorite-locations/{locationId}")
+    public User addFavoriteLocation(@PathVariable String username, @PathVariable Long locationId) {
+        return userService.addFavoriteLocation(username, locationId);
+    }
+
+    @GetMapping("/{username}/favorite-locations")
+    public Set<Long> getFavoriteLocations(@PathVariable String username) {
+        return userService.getFavoriteLocations(username);
     }
 }

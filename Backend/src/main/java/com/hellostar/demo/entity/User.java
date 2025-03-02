@@ -1,7 +1,6 @@
 package com.hellostar.demo.entity;
 
 import jakarta.persistence.*;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,20 +8,23 @@ import java.util.Set;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false, unique = true) // Username is the primary key
     private String username;
 
-    @Column(nullable = false, columnDefinition = "TEXT")
-    private String profilePictureURL;
+    @Column(nullable = false)
+    private String password;
+
+    @Column(columnDefinition = "TEXT") // Store as TEXT in the database
+    private String profilePic;
+
+    @Column(nullable = false, columnDefinition = "INT DEFAULT 0") // Add totalPoints with a default value of 0
+    private int totalPoints;
 
     @ManyToMany
     @JoinTable(
         name = "user_friends",
-        joinColumns = @JoinColumn(name = "user_id"),
-        inverseJoinColumns = @JoinColumn(name = "friend_id")
+        joinColumns = @JoinColumn(name = "username"), // Use username as the join column
+        inverseJoinColumns = @JoinColumn(name = "friend_username") // Use friend's username as the inverse join column
     )
     private Set<User> friends = new HashSet<>();
 
@@ -33,14 +35,6 @@ public class User {
     private Set<Long> favoriteLocationIds = new HashSet<>();
 
     // Getters and Setters
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getUsername() {
         return username;
     }
@@ -49,12 +43,28 @@ public class User {
         this.username = username;
     }
 
-    public String getProfilePictureURL() {
-        return profilePictureURL;
+    public String getPassword() {
+        return password;
     }
 
-    public void setProfilePictureURL(String profilePictureURL) {
-        this.profilePictureURL = profilePictureURL;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getProfilePic() {
+        return profilePic;
+    }
+
+    public void setProfilePic(String profilePic) {
+        this.profilePic = profilePic;
+    }
+
+    public int getTotalPoints() {
+        return totalPoints;
+    }
+
+    public void setTotalPoints(int totalPoints) {
+        this.totalPoints = totalPoints;
     }
 
     public Set<User> getFriends() {

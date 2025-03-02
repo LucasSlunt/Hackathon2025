@@ -3,8 +3,6 @@ package com.hellostar.demo.repository;
 import com.hellostar.demo.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, Long> {
-    User findByUsername(String username);
-
-    
+public interface UserRepository extends JpaRepository<User, String> {
+    // No changes needed here
 }

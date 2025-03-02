@@ -23,6 +23,7 @@ public class BadgeService {
     @Autowired
     private UserRepository userRepository;
 
+    // Method to create a new badge
     public Badge createBadge(String name, String description) {
         Badge badge = new Badge();
         badge.setName(name);
@@ -30,9 +31,12 @@ public class BadgeService {
         return badgeRepository.save(badge);
     }
 
-    public UserBadge assignBadgeToUser(Long userId, Long badgeId) {
-        User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
-        Badge badge = badgeRepository.findById(badgeId).orElseThrow(() -> new RuntimeException("Badge not found"));
+    // Method to assign a badge to a user
+    public UserBadge assignBadgeToUser(String username, Long badgeId) {
+        User user = userRepository.findById(username)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        Badge badge = badgeRepository.findById(badgeId)
+                .orElseThrow(() -> new RuntimeException("Badge not found"));
         UserBadge userBadge = new UserBadge();
         userBadge.setUser(user);
         userBadge.setBadge(badge);
@@ -40,16 +44,20 @@ public class BadgeService {
         return userBadgeRepository.save(userBadge);
     }
 
-    public List<UserBadge> getUserBadges(Long userId) {
-        return userBadgeRepository.findByUser_Id(userId);
+    // Method to get all badges for a user
+    public List<UserBadge> getUserBadges(String username) {
+        return userBadgeRepository.findByUser_Username(username);
     }
 
-    public List<UserBadge> getDisplayedBadges(Long userId) {
-        return userBadgeRepository.findByUser_IdAndIsDisplayedOnProfile(userId, true);
+    // Method to get badges displayed on a user's profile
+    public List<UserBadge> getDisplayedBadges(String username) {
+        return userBadgeRepository.findByUser_UsernameAndIsDisplayedOnProfile(username, true);
     }
 
+    // Method to toggle whether a badge is displayed on a user's profile
     public UserBadge toggleBadgeDisplay(Long userBadgeId, boolean isDisplayed) {
-        UserBadge userBadge = userBadgeRepository.findById(userBadgeId).orElseThrow(() -> new RuntimeException("UserBadge not found"));
+        UserBadge userBadge = userBadgeRepository.findById(userBadgeId)
+                .orElseThrow(() -> new RuntimeException("UserBadge not found"));
         userBadge.setDisplayedOnProfile(isDisplayed);
         return userBadgeRepository.save(userBadge);
     }
