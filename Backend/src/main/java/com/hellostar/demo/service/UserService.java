@@ -5,6 +5,7 @@ import com.hellostar.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -13,9 +14,11 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
+    
+
     // Method to add points to a user's totalPoints
     public User addPoints(String username, int points) {
-        User user = userRepository.findById(username)
+        User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new RuntimeException("User not found"));
         user.setTotalPoints(user.getTotalPoints() + points);
         return userRepository.save(user);
@@ -63,5 +66,9 @@ public class UserService {
     public Set<Long> getFavoriteLocations(String username) {
         User user = userRepository.findById(username).orElseThrow(() -> new RuntimeException("User not found"));
         return user.getFavoriteLocationIds();
+    }
+
+    public Optional<User> getUserByUsername(String username) {
+        return userRepository.findByUsername(username);
     }
 }

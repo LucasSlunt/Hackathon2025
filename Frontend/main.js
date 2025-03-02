@@ -29,3 +29,34 @@ var viirsOverlay = L.tileLayer(
     }
   );
   viirsOverlay.addTo(map);
+
+  
+  //RIGHT HERE theres gonna be the authentication information
+
+//name
+//image
+//email
+
+const user_name = "Alice";
+const email = "alice@example.com";
+const image_url = "image_url";
+
+fetch ("https://41f4-142-231-180-190.ngrok-free.app/api/users", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        name: user_name,
+        email: email,
+        imageUrl: image_url
+    })
+})
+.then(response => {
+    if (!response.ok) {
+        throw new Error("Failed to save user");
+    }
+    return response.json();
+})
+.then(data => console.log("User saved:", data))
+.catch(error => console.error("Error:", error));
