@@ -132,6 +132,21 @@ fetch('markers.json')
 
             // Add event listener to the marker to call locatePath when clicked
             marker.on('click', function() {
+                if(document.getElementById('info') !== null){
+                    document.getElementById('info').remove();
+                }
+                var newDiv = document.createElement('div');
+                newDiv.id = 'info';
+                newDiv.style.width = '50%';
+                newDiv.style.left = '10px';
+                newDiv.style.bottom = '10px';
+                newDiv.style.zIndex = '100';
+                newDiv.style.position = 'absolute';
+                newDiv.style.padding = '10px';
+                newDiv.style.backgroundColor = '#ffffffaa';
+                newDiv.style.border = '1px solid black';
+                newDiv.innerHTML = '<h4></h4><p>'+ markerData.info+'</p>';
+                document.body.appendChild(newDiv);
                 if (userLat !== undefined && userLng !== undefined) {
                     locatePath(userLat, userLng, markerData.latitude, markerData.longitude);
                 } else {
@@ -142,4 +157,5 @@ fetch('markers.json')
     })
     .catch(error => console.error('Error loading markers:', error));
 
-
+    // Add a div to the DOM
+    

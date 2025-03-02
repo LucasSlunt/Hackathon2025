@@ -4,19 +4,22 @@
             "id": 1,
             "latitude": 49.92503817896683,
             "longitude": -119.51931953430177,
-            "description": "Stargazing spot 1"
+            "description": "Bear Creek Park",
+            "info": "Bear Creek Park is a large park located in West Kelowna, British Columbia, Canada. The park is located on the west side of Okanagan Lake and is a popular destination for locals and tourists alike. The park features a large beach area, picnic tables, a playground, and a boat launch. The park is also home to a number of hiking and biking trails that offer stunning views of the lake and surrounding mountains. Bear Creek Park is a great place to spend a day enjoying the outdoors and taking in the natural beauty of the Okanagan Valley."
         },
         {
             "id": 2,
             "latitude": 49.8539284820863,
             "longitude": -119.41833364554302,
-            "description": "Stargazing spot 2"
+            "description": "SouthEast kelowna lookout",
+            "info": "SouthEast Kelowna Lookout is a popular hiking trail located in Kelowna, British Columbia, Canada. The trail is located in the South East Kelowna area of the city and offers stunning views of the Okanagan Valley and surrounding mountains. The trail is relatively easy and is suitable for hikers of all skill levels. The trail is a great place to go for a walk or hike and enjoy the natural beauty of the Okanagan Valley. The trail is also a popular spot for bird watching and wildlife viewing. SouthEast Kelowna Lookout is a great place to spend a day enjoying the outdoors and taking in the stunning views of the Okanagan Valley."
         },
         {
             "id": 3,
             "latitude": 50.11429107053959,
             "longitude": -119.46296300788677,
-            "description": "Stargazing spot 3"
+            "description": "Carr's Landing",
+            "info": "Carr's Landing is a small community located in Lake Country, British Columbia, Canada. The community is located on the eastern shore of Okanagan Lake and is a popular destination for locals and tourists alike. The community is home to a number of wineries, restaurants, and shops that offer a taste of the Okanagan Valley. Carr's Landing is a great place to spend a day exploring the local area and taking in the natural beauty of the Okanagan Valley."
         }
     ]
 }
