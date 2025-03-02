@@ -6,6 +6,7 @@
 <html>
     <body class="container">
         <!-- link to PicoCSS styling cdn -->
+         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
         <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
         
@@ -17,5 +18,51 @@
               <li><button onclick="window.location.href='constellation.html'"><span class="iconify" data-icon="material-symbols:school-outline-rounded"></span> Learn</a></button></li>
             </ul>
         </nav>
+
+
+        
+
+        <div id="upload-container" class="upload">
+                <h3>Upload Picture</h3>
+                
+                <!-- Image Preview (Initially Hidden) -->
+                <img id="imagePreview" class="image-preview" src="" alt="Photo Preview">
+
+                <!-- File Upload -->
+                <input type="file" id="fileInput" accept="image/*">
+                
+                <!-- File Name (Initially Hidden) -->
+                <div id="fileName" class="file-name" style="display: none;"></div>
+
+                <!-- Upload Button -->
+                <button id="uploadImage">Upload</button>
+            
+        </div>
+
+        <!-- Modal -->
+        <div id="modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <h3>Constellation Found! +3 Points</h3>
+                <img id="modalImagePreview" class="image-preview" src="" alt="Submitted Image">
+                
+                <p>Guess the correct constellation:</p>
+                <select id="constellationDropdown">
+                    <option value="orion">Orion</option>
+                    <option value="ursaMajor">Ursa Major</option>
+                    <option value="cassiopeia">Cassiopeia</option>
+                    <option value="leo">Leo</option>
+                </select>
+                
+                <button id="submitGuess">Submit</button>
+                <p id="feedbackMessage"></p>
+                <button id="closeModal">Close</button>
+            </div>
+        </div>
+
+
+
+
+        
+        <script src="index.js"></script>
     </body>
 </html>
