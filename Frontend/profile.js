@@ -1,3 +1,45 @@
+async function loadUserProfile() {
+    try {
+        // Get username from cookies
+        const username = readCookie("username");
+        console.log(username);
+        if (!username) {
+            console.error("No username found in cookies.");
+            document.getElementById("userProfile").innerHTML = "<p>No user logged in.</p>";
+            return;
+        }
+
+        // Fetch user details from the backend
+        const response = await fetch(`http://localhost:8080/api/users/${username}/profile-pic`);
+        if (!response.ok) throw new Error(`Failed to fetch user: ${response.status}`);
+
+        const profilePicUrl = await response.text(); // Expecting a URL string
+
+        // Select profile container
+        const userProfileContainer = document.getElementById("userProfile");
+
+        // Inject user data into the DOM
+        userProfileContainer.innerHTML = `
+            <div class="user-info">
+                <h3>${username}</h3>
+                <button id="openChangeProfile">Change Profile Image</button>
+            </div>
+        `;
+
+        // Attach event listener for profile image change
+        document.getElementById("openChangeProfile").addEventListener("click", () => {
+            document.getElementById("uploadModal").style.display = "flex"; // Show modal
+        });
+
+    } catch (error) {
+        console.error("Error loading user profile:", error);
+        document.getElementById("userProfile").innerHTML = "<p>Failed to load profile. Please try again.</p>";
+    }
+}
+
+//  Run on page load
+document.addEventListener("DOMContentLoaded", loadUserProfile);
+
 document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("uploadModal");
     const openModalBtn = document.getElementById("openChangeProfile");
@@ -138,7 +180,6 @@ async function searchUsers() {
 
 
 // Add Friend
-// Add Friend (Now Saves to Database)
 async function addFriend(friendUsername) {
     cookiedUsername = readCookie("username");
     try {
@@ -153,7 +194,7 @@ async function addFriend(friendUsername) {
             throw new Error(`Failed to add friend. Status: ${response.status}, Message: ${errorMessage}`);
         }
         //if (!response.ok) 
-            //throw new Error(`Failed to add friend, your username is ${cookiedUsername}, friend username is ${friendUsername}`);
+            //throw new Error(Failed to add friend, your username is ${cookiedUsername}, friend username is ${friendUsername});
 
         updateFriendList();
         alert("Friend request sent!");
@@ -167,9 +208,9 @@ async function addFriend(friendUsername) {
 // Update Friend List
 // Update Friend List (Fetch from API)
 async function updateFriendList() {
-    cookiedUsername = readCookie("username");
+    const cookiedUsername = readCookie("username");
     const friendListContainer = document.getElementById("friendList");
-    
+
     if (!friendListContainer) {
         console.error("Friend list container not found!");
         return;
@@ -178,28 +219,20 @@ async function updateFriendList() {
     friendListContainer.innerHTML = "<p>Loading friends...</p>"; // Show loading state
 
     try {
-        
-        // 🔹 Fetch the real friend list (Replace 'Alice' dynamically if needed)
+        // Fetch the friend list
         const response = await fetch(`http://localhost:8080/api/users/${cookiedUsername}/friends`);
 
         if (!response.ok) throw new Error("Failed to fetch friends");
-        const responseText = await response.text(); // Read raw response
-        console.log("Raw response:", responseText); // Debugging log
 
-        let friendsData;
-        try {
-            friendsData = JSON.parse(responseText);
-        } catch (jsonError) {
-            throw new Error(`Invalid JSON format from API: ${jsonError.message}`);
+        // Parse the response as JSON
+        const friends = await response.json(); // This will be an array of user objects
+
+        console.log("Fetched friends:", friends); // Debugging log
+
+        // Ensure the response is an array
+        if (!Array.isArray(friends)) {
+            throw new Error("Unexpected API response format: Expected an array of friends");
         }
-
-        console.log("Parsed JSON:", friendsData); // Check JSON structure
-
-        // Ensure response is in the correct format
-        if (!friendsData || !Array.isArray(friendsData.friends)) {
-            throw new Error("Unexpected API response format");
-        }
-        const friends = await response.json(); // Store fetched data
 
         friendListContainer.innerHTML = ""; // Clear loading state
 
