@@ -108,12 +108,50 @@
                 <span class="close-btn" onclick="closeViewFriendsPopup()">&times;</span>
                 <h3>Your Friends</h3>
                 
-                <!-- Friend List -->
                 <div id="friendList" class="user-list">
-                    <!-- Friend list will be dynamically added here -->
-                </div>
+                    <div class="friend">
+                        <p><strong>John Doe</strong></p>
+                        <button class="viewProfileBtn" data-username="John Doe" data-image="https://robohash.org/johndoe.png?size=100x100">View Profile</button>
+                    </div>
+                    <div class="friend">
+                        <p><strong>Jane Smith</strong></p>
+                        <button class="viewProfileBtn" data-username="Jane Smith" data-image="https://robohash.org/janesmith.png?size=100x100">View Profile</button>
+                    </div>
+                </div>                
             </div>
         </div>
 
+        <!-- Friend Profile Popup Modal -->
+        <div id="friendProfileModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="closeProfileModal">&times;</span>
+                <h3 id="friendName">Friend Profile</h3>
+                <img id="friendProfilePic" src="">
+                <p id="friendUsername"></p>
+
+                <div class="profile-stats">
+                    <div class="stat-box">
+                        <h4>Friends</h4>
+                        <p id="friend-count">0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Constellations Logged</h4>
+                        <p id="logged-count">0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Nights Stargazing</h4>
+                        <p id="nights-count">0</p>
+                    </div>
+                </div>
+        
+                <!-- Profile Trophies Section -->
+                <div class="profile-trophies">
+                    <h3>Top Badges</h3>
+                    <div id="selected-trophies" class="trophy-display">
+                        <!-- THeir badges -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
