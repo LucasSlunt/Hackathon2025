@@ -142,12 +142,18 @@ async function searchUsers() {
 async function addFriend(friendUsername) {
     cookiedUsername = readCookie("username");
     try {
-        const response = await fetch(`http://localhost:8080/api/users/${cookiedUsername}/addFriend/${friendUsername}`, {
+        const response = await fetch(`http://localhost:8080/api/users/${cookiedUsername}/friends/${friendUsername}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" }
         });
 
-        if (!response.ok) throw new Error("Failed to add friend");
+        if (!response.ok) {
+            // Attempt to read the response body for detailed error info
+            const errorMessage = await response.text();
+            throw new Error(`Failed to add friend. Status: ${response.status}, Message: ${errorMessage}`);
+        }
+        //if (!response.ok) 
+            //throw new Error(`Failed to add friend, your username is ${cookiedUsername}, friend username is ${friendUsername}`);
 
         updateFriendList();
         alert("Friend request sent!");
@@ -171,6 +177,7 @@ async function updateFriendList() {
     friendListContainer.innerHTML = "<p>Loading friends...</p>"; // Show loading state
 
     try {
+        
         // 🔹 Fetch the real friend list (Replace 'Alice' dynamically if needed)
         const response = await fetch("http://localhost:8080/api/users/Alice/friends");
 
