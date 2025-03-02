@@ -8,6 +8,7 @@
         <!-- link to PicoCSS styling cdn -->
          <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 
         <title>Home Page</title>
@@ -62,22 +63,23 @@
 
                 <!-- File Upload -->
                 <input type="file" id="fileInput" accept="image/*">
+
                 
                 <!-- File Name (Initially Hidden) -->
                 <div id="fileName" class="file-name" style="display: none;"></div>
 
                 <!-- Upload Button -->
-                <button id="uploadImage">Upload</button>
+                <button id="uploadImage" onclick="runInf()">Upload</button>
             
         </div>
 
         <!-- Modal -->
         <div id="modal" class="modal" style="display: none;">
             <div class="modal-content">
-                <h3>Constellation Found! +3 Points</h3>
+                <h3 id="h3modal">Loading...</h3>
                 <img id="modalImagePreview" class="image-preview" src="" alt="Submitted Image">
                 
-                <p>Guess the correct constellation:</p>
+                <p id="pmodal">Loading...</p>
                 <select id="constellationDropdown">
                     <option value="orion">Orion</option>
                     <option value="ursaMajor">Ursa Major</option>
