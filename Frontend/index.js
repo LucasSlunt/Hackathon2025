@@ -1,30 +1,76 @@
-const fileInput = document.getElementById("file-input");
-const imagePreview = document.getElementById("image-preview");
-const fileNameText = document.querySelector(".file-name");
-const submitButton = document.getElementById("submit-btn");
+// Get elements from the DOM
+const fileInput = document.getElementById('fileInput');
+const imagePreview = document.getElementById('imagePreview');
+const fileNameDiv = document.getElementById('fileName');
+const uploadButton = document.getElementById('uploadImage');
 
-fileInput.addEventListener("change", function () {
+const ws = new WebSocket("ws:localhost:3000");
+
+// Check if there's a stored image in localStorage
+if (localStorage.getItem('Image')) {
+    imagePreview.src = localStorage.getItem('Image');
+    imagePreview.style.display = 'block';
+    fileNameDiv.textContent = localStorage.getItem('ImageName');
+    fileNameDiv.style.display = 'block';
+    uploadButton.style.display = 'block';
+} else {
+    // Reset the file input and preview when there is no stored image
+    fileInput.value = '';  // Reset the file input field
+    imagePreview.style.display = 'none';
+    fileNameDiv.style.display = 'none';
+    uploadButton.style.display = 'none';
+}
+
+// Handle image file input change
+fileInput.addEventListener('change', function () {
     const file = this.files[0];
-
     if (file) {
-        fileNameText.textContent = file.name;
-
         const reader = new FileReader();
         reader.onload = function (e) {
+            // Display the image preview
             imagePreview.src = e.target.result;
-            imagePreview.style.display = "block";
+            imagePreview.style.display = 'block';
+
+            
+
+            // Show the upload button
+            uploadButton.style.display = 'block';
         };
         reader.readAsDataURL(file);
-    } else {
-        fileNameText.textContent = "No file chosen";
-        imagePreview.style.display = "none";
     }
 });
 
-submitButton.addEventListener("click", function () {
-    if (fileInput.files.length === 0) {
-        alert("Please upload a picture first.");
-    } else {
-        alert("Picture submitted: " + fileNameText.textContent);
+// Save and update profile picture
+uploadButton.addEventListener('click', () => {
+   
+    const photo = document.getElementById('FileInput');
+    const formData = new FormData();
+    formData.append('photo', photo);
+
+    fetch('/upload', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        const photoPath = data.filePath;
+        const message = JSON.stringify({ photoPath: photoPath });
+        ws.send(message);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+    
+
+    alert("Image saved!");
+     // Redirect to another page
+    window.location.href = 'points.html';
+});
+
+// Close the modal when clicking outside of modal-content
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.style.display = "none";
     }
 });
