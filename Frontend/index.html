@@ -8,6 +8,7 @@
         <!-- link to PicoCSS styling cdn -->
          <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 
         <title>Home Page</title>
@@ -62,12 +63,13 @@
 
                 <!-- File Upload -->
                 <input type="file" id="fileInput" accept="image/*">
+
                 
                 <!-- File Name (Initially Hidden) -->
                 <div id="fileName" class="file-name" style="display: none;"></div>
 
                 <!-- Upload Button -->
-                <button id="uploadImage">Upload</button>
+                <button id="uploadImage" onclick="runInf()">Upload</button>
             
         </div>
 

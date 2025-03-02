@@ -1,3 +1,13 @@
+const loadImageBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result.split(',')[1]); // Remove "data:image/png;base64,"
+        reader.onerror = (error) => reject(error);
+    });
+}
+
+
 // Get elements from the DOM
 //const fileInput = document.getElementById('fileInput');
 const imagePreview = document.getElementById('imagePreview');
@@ -47,9 +57,6 @@ closeModalButton.addEventListener('click', () => {
     modal.style.display = "none";
 });
 
-//just added
-
-const ws = new WebSocket("ws:localhost:3000");
 
 //Check if there's a stored image in localStorage
 if (localStorage.getItem('Image')) {
@@ -85,33 +92,66 @@ fileInput.addEventListener('change', function () {
     }
 });
 
-// Save and update profile picture
-// uploadButton.addEventListener('click', () => {
-   
-//     const photo = document.getElementById('FileInput');
-//     const formData = new FormData();
-//     formData.append('photo', photo);
+async function runInf(){
+    const input = document.getElementById("fileInput");
+    if (!input.files.length) {
+        console.error("No file selected.");
+        return;
+    }
 
-//     fetch('/upload', {
-//         method: 'POST',
-//         body: formData
-//     })
-//     .then(response => response.json())
-//     .then(data => {
-//         const photoPath = data.filePath;
-//         const message = JSON.stringify({ photoPath: photoPath });
-//         ws.send(message);
-//     })
-//     .catch(error => {
-//         console.error('Error:', error);
-//     });
-
-    
-
-//     alert("Image saved!");
-//      // Redirect to another page
-//     //window.location.href = 'points.html';
-// });
+    const image = await loadImageBase64(input.files[0]);
+    axios({
+        method: "POST",
+        url: "https://detect.roboflow.com/constellation-dsphi/1",
+        params: {
+            api_key: "FJk5lS5W35NQFxPljIrn"
+        },
+        data:  image , 
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        }
+    })
+    .then(function(response) {
+        if (response.data.predictions.length > 0) {
+            const constellationName = response.data.predictions[0].class;
+            console.log("Detected Constellation:", constellationName);
+            //known constellations from the dataset
+            const constellations = [
+                "aquila",
+                "bootes",
+                "canis_major",
+                "canis_minor",
+                "cassiopeia",
+                "cygnus",
+                "gemini",
+                "leo",
+                "lyra",
+                "moon",
+                "orion",
+                "pleiades",
+                "sagittarius",
+                "scorpius",
+                "taurus",
+                "ursa_major"
+            ];
+            const filteredConstellations = constellations.filter(name => name !== constellationName);
+            const randomConstellations = filteredConstellations.sort(() => 0.5 - Math.random()).slice(0, 3);
+            randomConstellations.push(constellationName);
+            randomConstellations.sort(() => 0.5 - Math.random()); // Shuffle the array
+            
+            correctAnswer = constellationName;
+            // Populate the dropdown with the options
+            constellationDropdown.innerHTML = randomConstellations.map(name => `<option value="${name}">${name}</option>`).join('');
+            //choose 3-4 random constellations along with the correct one
+        } else {
+            console.log("No constellation detected.");
+            //choose no constellation detected modal
+        }
+    })
+    .catch(function(error) {
+        console.error(error.message);
+    });
+}
 
 // Close the modal when clicking outside of modal-content
 // window.addEventListener("click", (event) => {

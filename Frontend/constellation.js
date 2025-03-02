@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const list = document.getElementById("constellation-list");
     const searchInput = document.getElementById("searchInput");
@@ -87,3 +88,7 @@ window.addEventListener("click", (event) => {
         document.getElementById("modal").style.display = "none";
     }
 });
+
+
+
+
