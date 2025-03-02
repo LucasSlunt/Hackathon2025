@@ -12,7 +12,7 @@ public class User {
     private String username;
 
     @Column(nullable = false)
-    private String password;
+    private String email;
 
     @Column(columnDefinition = "TEXT") // Store as TEXT in the database
     private String profilePic;
@@ -43,12 +43,12 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassword(String email) {
+        this.email = email;
     }
 
     public String getProfilePic() {

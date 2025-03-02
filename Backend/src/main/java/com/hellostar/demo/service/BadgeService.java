@@ -4,8 +4,6 @@ import com.hellostar.demo.entity.Badge;
 import com.hellostar.demo.repository.BadgeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Service
 public class BadgeService {
@@ -13,16 +11,6 @@ public class BadgeService {
     @Autowired
     private BadgeRepository badgeRepository;
 
-    @PostMapping
-    public Badge createBadge(
-            @RequestParam String name,
-            @RequestParam String description,
-            @RequestParam int level,
-            @RequestParam String innerImagePath) {
-        return badgeService.createBadge(name, description, level, innerImagePath);
-    }
-
-    /* 
     // Method to create a new badge
     public Badge createBadge(String name, String description, int level, String innerImagePath) {
         Badge badge = new Badge();
@@ -31,7 +19,7 @@ public class BadgeService {
         badge.setLevel(level);
         badge.setInnerImagePath(innerImagePath);
         return badgeRepository.save(badge);
-    }*/
+    }
 
     // Method to update a badge's level
     public Badge updateBadgeLevel(Long badgeId, int level) {

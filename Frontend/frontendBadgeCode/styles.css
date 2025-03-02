@@ -34,3 +34,23 @@ body {
   width: 100%;
   height: 100%;
 }
+
+.badge-colour-1 { fill: #000000; }
+.badge-colour-2 { fill: #FFFFFF; }
+.badge-colour-3 { fill: #888888; }
+.badge-colour-1, .badge-colour-2, .badge-colour-3 { stroke-width: 0px; }
+
+.badge-bronze-1 { fill: #501c07; }
+.badge-bronze-2 { fill: #cc852d; }
+.badge-bronze-3 { fill: #774a20; }
+.badge-bronze-1, .badge-bronze-2, .badge-bronze-3 { stroke-width: 0px; }
+
+.badge-silver-1 { fill: #3f3a39; }
+.badge-silver-2 { fill: #dddce3; }
+.badge-silver-3 { fill: #9194ac; }
+.badge-silver-1, .badge-silver-2, .badge-silver-3 { stroke-width: 0px; }
+
+.badge-gold-1 { fill: #b5640b; }
+.badge-gold-2 { fill: #f7bd02; }
+.badge-gold-3 { fill: #fff038; }
+.badge-gold-1, .badge-gold-2, .badge-gold-3 { stroke-width: 0px; }
