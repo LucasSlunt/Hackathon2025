@@ -2,9 +2,21 @@
     "markers": [
         {
             "id": 1,
-            "latitude": 51.505,
-            "longitude": -0.09,
-            "description": ""
+            "latitude": 49.92503817896683,
+            "longitude": -119.51931953430177,
+            "description": "Stargazing spot 1"
+        },
+        {
+            "id": 2,
+            "latitude": 49.8539284820863,
+            "longitude": -119.41833364554302,
+            "description": "Stargazing spot 2"
+        },
+        {
+            "id": 3,
+            "latitude": 50.11429107053959,
+            "longitude": -119.46296300788677,
+            "description": "Stargazing spot 3"
         }
     ]
 }

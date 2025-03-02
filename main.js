@@ -8,7 +8,10 @@ if (navigator.geolocation) {
         userLat = position.coords.latitude;
         userLng = position.coords.longitude;
         map.setView([userLat, userLng], 8); // Center map on user's location
-        L.marker([userLat, userLng]).addTo(map)
+        L.circleMarker([userLat, userLng], {
+            color: 'blue',
+            radius: 8
+        }).addTo(map)
             .bindPopup('You are here!')
             .openPopup();
     }, function() {
@@ -116,5 +119,27 @@ map.on('click', function(e) {
 
     
 });
+
+// Load markers from markers.json and add them to the map
+fetch('markers.json')
+    .then(response => response.json())
+    .then(data => {
+        data.markers.forEach(markerData => {
+            var marker = L.circleMarker([markerData.latitude, markerData.longitude], {
+                color: 'red',
+                radius: 8
+            }).addTo(map).bindPopup(markerData.description);
+
+            // Add event listener to the marker to call locatePath when clicked
+            marker.on('click', function() {
+                if (userLat !== undefined && userLng !== undefined) {
+                    locatePath(userLat, userLng, markerData.latitude, markerData.longitude);
+                } else {
+                    alert('User location not available.');
+                }
+            });
+        });
+    })
+    .catch(error => console.error('Error loading markers:', error));
 
 
