@@ -28,6 +28,10 @@
     font-size: 16px;
 }
 
+.total-points {
+    margin-left: 40px;
+}
+
 .user-info button {
     height: 10px;
     width: 140px;

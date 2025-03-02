@@ -187,6 +187,34 @@ async function updateFriendList() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const totalPointsElement = document.querySelector(".total-points");
+
+    const username = readCookie("username");
+    console.log(username);
+    if (!username) {
+        console.error("No username found in cookies.");
+        document.getElementById("userProfile").innerHTML = "<p>No user logged in.</p>";
+        return;
+    }
+
+    // Function to fetch total points from backend
+    async function fetchTotalPoints() {
+        try {
+            const response = await fetch("http://localhost:8080/api/users/${username}/total-points");
+            if (!response.ok) throw new Error("Failed to fetch total points");
+
+            const data = await response.json();
+            totalPointsElement.textContent = `Total Points: ${data.points}`; 
+        } catch (error) {
+            console.error("Error fetching total points:", error);
+            totalPointsElement.textContent = "Total Points: Error loading"; 
+        }
+    }
+
+    // Call function to fetch and display total points
+    fetchTotalPoints();
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     const profileModal = document.getElementById("friendProfileModal");
