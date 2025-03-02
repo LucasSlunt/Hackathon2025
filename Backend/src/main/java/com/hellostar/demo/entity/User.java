@@ -98,4 +98,11 @@ public class User {
     public String getPassword() {
         return password;
     }
+
+    public User orElseThrow(Object object) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'orElseThrow'");
+    }
+
+    
 }
