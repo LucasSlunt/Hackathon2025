@@ -1,0 +1,139 @@
+
+  
+  /* General body and layout */
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 0 2rem;
+    margin: 0;
+  }
+  
+  /* Header styles */
+  header {
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 3.5em;
+    color: #c5c4c2;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Section Styles */
+  section {
+    padding: 50px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  section h2 {
+    font-size: 2.5em;
+    color: #ddd7d7;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  section p {
+    font-size: 1.2em;
+    color: #bdc3c7;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Features Section */
+  .features ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .features li {
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .features li:hover {
+    transform: translateY(-10px);
+  }
+  
+  .features li strong {
+    color: #ffffff;
+    font-weight: 500;
+  }
+  
+  .features li p {
+    color: #ecf0f1;
+    margin-top: 10px;
+  }
+  
+  /* Team Section */
+  .team {
+    background-color: #2c3e50;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 50px;
+  }
+  
+  .team h2 {
+    text-align: center;
+  }
+  
+  .team p {
+    color: #ecf0f1;
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #1b2a49;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1em;
+    color: #ecf0f1;
+    position: relative;
+  }
+  
+  footer p {
+    margin: 0;
+    color: #bdc3c7;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2.5em;
+    }
+  
+    section h2 {
+      font-size: 2em;
+    }
+  
+    section p, .features li, .team p {
+      font-size: 1em;
+    }
+  
+    .features ul {
+      grid-template-columns: 1fr;
+    }
+  
+    footer {
+      font-size: 1em;
+    }
+  }
+  
