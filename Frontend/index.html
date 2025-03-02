@@ -97,6 +97,8 @@
         
         <script src="index.js"></script>
 
+       
+
         <!-- 🔐 Login Modal (Blocks Interaction Until Login is Successful) -->
         <div id="loginModal" class="modal">
             <div class="modal-content">
@@ -114,6 +116,12 @@
                 </form>
             </div>
         </div>
+
+        <script>
+            function setCookie(name) {
+            document.cookie = username.value + "=" + name;
+            }
+        </script>
 
         <script>
             document.getElementById("loginForm").addEventListener("submit", function(event) {
