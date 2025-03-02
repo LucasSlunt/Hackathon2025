@@ -7,7 +7,7 @@
         "area_of_sky_covered": 1,
         "best_month_to_see": "November",
         "represents": "Andromeda (Princess)",
-        "history": "Andromeda is a prominent northern constellation named after the princess Andromeda in Greek mythology. According to myth, Andromeda was the daughter of King Cepheus and Queen Cassiopeia of Ethiopia. Her mother\u00e2\u20ac\u2122s boast about Andromeda's beauty angered the sea nymphs, leading Poseidon to send a sea monster, Cetus, to ravage the land. To appease the gods, Andromeda was chained to a rock as a sacrifice but was rescued by the hero Perseus, whom she later married.",
+        "history": "Andromeda is a prominent northern constellation named after the princess Andromeda in Greek mythology. According to myth, Andromeda was the daughter of King Cepheus and Queen Cassiopeia of Ethiopia. Her mother's boast about Andromeda's beauty angered the sea nymphs, leading Poseidon to send a sea monster, Cetus, to ravage the land. To appease the gods, Andromeda was chained to a rock as a sacrifice but was rescued by the hero Perseus, whom she later married.",
         "fun_fact": "Did you know Andromeda was named after a princess in Greek mythology who was chained to a rock to be eaten by a sea monster? Luckily, Perseus saved her just in time!",
         "image": "images\\andromeda.png"
     },
@@ -19,8 +19,8 @@
         "area_of_sky_covered": 0.6,
         "best_month_to_see": "April",
         "represents": "Air Pump",
-        "history": "Antlia, meaning \"the Air Pump,\" is a constellation introduced in the 18th century by French astronomer Nicolas-Louis de Lacaille. Lacaille named it to honor the air pump, a recent invention at the time, reflecting the Age of Enlightenment's emphasis on science and technology. Antlia is relatively faint and does not contain any particularly bright stars.\u00e2\u20ac\u2039",
-        "fun_fact": "This constellation represents an air pump\u00e2\u20ac\u201dbecause apparently, 18th-century astronomers really liked naming things after scientific instruments.",
+        "history": "Antlia, meaning \"the Air Pump,\" is a constellation introduced in the 18th century by French astronomer Nicolas-Louis de Lacaille. Lacaille named it to honor the air pump, a recent invention at the time, reflecting the Age of Enlightenment's emphasis on science and technology. Antlia is relatively faint and does not contain any particularly bright stars. ",
+        "fun_fact": "This constellation represents an air pump, because apparently, 18th-century astronomers really liked naming things after scientific instruments.",
         "image": "images\\antlia.png"
     },
     {
@@ -31,8 +31,8 @@
         "area_of_sky_covered": 0.5,
         "best_month_to_see": "July",
         "represents": "Bird of Paradise",
-        "history": "Apus, derived from the Greek word for \"footless,\" represents the bird-of-paradise, which was once believed to lack feet due to the way specimens were prepared and presented in Europe. This constellation was created by Dutch navigators Pieter Dirkszoon Keyser and Frederick de Houtman in the late 16th century during their explorations in the southern hemisphere. Apus is one of the 12 constellations introduced in Johann Bayer's star atlas \"Uranometria\" in 1603. \u00e2\u20ac\u2039",
-        "fun_fact": "A constellation named after the bird of paradise, but ironically, you won\u00e2\u20ac\u2122t find it in the skies of paradise\u00e2\u20ac\u201dit\u00e2\u20ac\u2122s only visible in the Southern Hemisphere!",
+        "history": "Apus, derived from the Greek word for \"footless,\" represents the bird-of-paradise, which was once believed to lack feet due to the way specimens were prepared and presented in Europe. This constellation was created by Dutch navigators Pieter Dirkszoon Keyser and Frederick de Houtman in the late 16th century during their explorations in the southern hemisphere. Apus is one of the 12 constellations introduced in Johann Bayer's star atlas \"Uranometria\" in 1603.  ",
+        "fun_fact": "A constellation named after the bird of paradise, but ironically, you won't find it in the skies of paradise, as it's only visible in the Southern Hemisphere!",
         "image": "images\\apus.png"
     },
     {
@@ -43,7 +43,7 @@
         "area_of_sky_covered": 2.4,
         "best_month_to_see": "October",
         "represents": "Water Bearer",
-        "history": "Aquarius, Latin for \"water-bearer,\" is one of the oldest recognized constellations and a member of the zodiac. In Greek mythology, it is associated with Ganymede, a beautiful youth whom Zeus carried to Olympus to serve as the cupbearer to the gods. Aquarius is situated in a region of the sky often referred to as \"the Sea\" due to its association with other water-related constellations like Pisces and Cetus. The constellation was cataloged by Ptolemy in the 2nd century and contains several notable stars and deep-sky objects. \u00e2\u20ac\u2039",
+        "history": "Aquarius, Latin for \"water-bearer,\" is one of the oldest recognized constellations and a member of the zodiac. In Greek mythology, it is associated with Ganymede, a beautiful youth whom Zeus carried to Olympus to serve as the cupbearer to the gods. Aquarius is situated in a region of the sky often referred to as \"the Sea\" due to its association with other water-related constellations like Pisces and Cetus. The constellation was cataloged by Ptolemy in the 2nd century and contains several notable stars and deep-sky objects.  ",
         "fun_fact": "The \"Water Bearer\" is actually Ganymede, the cupbearer of the gods, who was so handsome that Zeus kidnapped him and made him serve drinks on Mount Olympus.",
         "image": "images\\aquarius.png"
     },
@@ -56,7 +56,7 @@
         "best_month_to_see": "August",
         "represents": "Eagle",
         "history": "Aquila is a prominent constellation in Greek mythology, representing the eagle of Zeus. According to legend, this eagle carried Zeus' thunderbolts and was also responsible for abducting Ganymede, a beautiful Trojan prince, to serve as the cupbearer of the gods. The constellation contains Altair, one of the brightest stars in the sky and a part of the Summer Triangle. Aquila has been recognized since antiquity and was cataloged by Ptolemy in the 2nd century.",
-        "fun_fact": "Meet Zeus\u00e2\u20ac\u2122s personal delivery bird! Aquila, the eagle, carried Zeus\u00e2\u20ac\u2122s thunderbolts\u00e2\u20ac\u201ddefinitely not a bird you\u00e2\u20ac\u2122d want to mess with.",
+        "fun_fact": "Meet Zeus's personal delivery bird! Aquila, the eagle, carried Zeus's thunderbolts, definitely not a bird you'd want to mess with.",
         "image": "images\\aquila.png"
     },
     {
@@ -79,8 +79,8 @@
         "area_of_sky_covered": 1.1,
         "best_month_to_see": "December",
         "represents": "Ram",
-        "history": "Aries is one of the twelve zodiac constellations and is deeply tied to Greek mythology. It represents the Golden Ram, which saved Phrixus and Helle from being sacrificed. The ram\u00e2\u20ac\u2122s fleece later became the object of Jason and the Argonauts' legendary quest. Aries was recognized by Ptolemy and has been significant in astrology and navigation for centuries. It contains Hamal, its brightest star.",
-        "fun_fact": "Aries is linked to the famous golden ram whose fleece was sought after by Jason and the Argonauts\u00e2\u20ac\u201dthink of it as the original treasure hunt.",
+        "history": "Aries is one of the twelve zodiac constellations and is deeply tied to Greek mythology. It represents the Golden Ram, which saved Phrixus and Helle from being sacrificed. The ram's fleece later became the object of Jason and the Argonauts' legendary quest. Aries was recognized by Ptolemy and has been significant in astrology and navigation for centuries. It contains Hamal, its brightest star.",
+        "fun_fact": "Aries is linked to the famous golden ram whose fleece was sought after by Jason and the Argonauts - think of it as the original treasure hunt.",
         "image": "images\\aries.png"
     },
     {
@@ -91,8 +91,8 @@
         "area_of_sky_covered": 0.9,
         "best_month_to_see": "February",
         "represents": "Charioteer",
-        "history": "Auriga is a constellation linked to Erichthonius, a legendary king of Athens who was credited with inventing the four-horse chariot. It has also been associated with Hephaestus, the lame blacksmith god, and charioteers in general. Auriga contains Capella, one of the brightest stars in the night sky, and has been known since ancient times, appearing in Ptolemy\u00e2\u20ac\u2122s catalog.",
-        "fun_fact": "A constellation of a charioteer, but no one\u00e2\u20ac\u2122s quite sure who he is\u00e2\u20ac\u201dsome say he\u00e2\u20ac\u2122s Erichthonius, a king of Athens who invented the four-horse chariot.",
+        "history": "Auriga is a constellation linked to Erichthonius, a legendary king of Athens who was credited with inventing the four-horse chariot. It has also been associated with Hephaestus, the lame blacksmith god, and charioteers in general. Auriga contains Capella, one of the brightest stars in the night sky, and has been known since ancient times, appearing in Ptolemy's catalog.",
+        "fun_fact": "A constellation of a charioteer, but no one's quite sure who he is. Some say he's Erichthonius, a king of Athens who invented the four-horse chariot.",
         "image": "images\\auriga.png"
     },
     {
@@ -103,8 +103,8 @@
         "area_of_sky_covered": 1.5,
         "best_month_to_see": "June",
         "represents": "Herdsman",
-        "history": "Bo\u00c3\u00b6tes is often associated with Arcas, the son of Callisto, who was almost killed by his own father, Zeus, before being placed in the sky. Some myths also link Bo\u00c3\u00b6tes to a plowman or herdsman, guiding the Big Dipper (part of Ursa Major). The constellation contains Arcturus, one of the brightest stars in the sky. Bo\u00c3\u00b6tes has been documented since antiquity and continues to be a key feature in northern hemisphere star maps.",
-        "fun_fact": "His name means 'herdsman,' but his brightest star, Arcturus, was historically believed to signal the start of harvest season. A cosmic farmer\u00e2\u20ac\u2122s almanac!",
+        "history": "Boötes is often associated with Arcas, the son of Callisto, who was almost killed by his own father, Zeus, before being placed in the sky. Some myths also link Boötes to a plowman or herdsman, guiding the Big Dipper (part of Ursa Major). The constellation contains Arcturus, one of the brightest stars in the sky. Boötes has been documented since antiquity and continues to be a key feature in northern hemisphere star maps.",
+        "fun_fact": "His name means 'herdsman,' but his brightest star, Arcturus, was historically believed to signal the start of harvest season. A cosmic farmer's almanac!",
         "image": "images\\bootes.png"
     },
     {
@@ -115,8 +115,8 @@
         "area_of_sky_covered": 0.3,
         "best_month_to_see": "January",
         "represents": "Chisel",
-        "history": "Caelum is one of the lesser-known constellations, introduced in the 18th century by Nicolas-Louis de Lacaille, a French astronomer. It represents an engraving chisel, reflecting the Enlightenment\u00e2\u20ac\u2122s focus on science and craftsmanship. Caelum is a faint constellation with no particularly bright stars, but it is home to some interesting binary star systems.",
-        "fun_fact": "This constellation represents a sculptor\u00e2\u20ac\u2122s chisel\u00e2\u20ac\u201dbecause, apparently, stars needed a little artistic touch too.",
+        "history": "Caelum is one of the lesser-known constellations, introduced in the 18th century by Nicolas-Louis de Lacaille, a French astronomer. It represents an engraving chisel, reflecting the Enlightenment's focus on science and craftsmanship. Caelum is a faint constellation with no particularly bright stars, but it is home to some interesting binary star systems.",
+        "fun_fact": "This constellation represents a sculptor's chisel - because, apparently, stars needed a little artistic touch too.",
         "image": "images\\caelum.png"
     },
     {
@@ -127,8 +127,8 @@
         "area_of_sky_covered": 1.6,
         "best_month_to_see": "February",
         "represents": "Giraffe",
-        "history": "Camelopardalis is a relatively modern constellation, named in the 17th century by Petrus Plancius. Its name comes from the Latin term for \"giraffe,\" combining \"camel\" and \"leopard\" due to the animal\u00e2\u20ac\u2122s spotted coat and long legs. This northern constellation is relatively faint but holds several deep-sky objects.",
-        "fun_fact": "Despite the fancy name, this constellation simply means 'giraffe'\u00e2\u20ac\u201dbecause ancient astronomers thought it looked like a camel-leopard hybrid.",
+        "history": "Camelopardalis is a relatively modern constellation, named in the 17th century by Petrus Plancius. Its name comes from the Latin term for \"giraffe,\" combining \"camel\" and \"leopard\" due to the animal's spotted coat and long legs. This northern constellation is relatively faint but holds several deep-sky objects.",
+        "fun_fact": "Despite the fancy name, this constellation simply means 'giraffe'. This is because ancient astronomers thought it looked like a camel-leopard hybrid.",
         "image": "images\\camelopardalis.png"
     },
     {
@@ -151,8 +151,8 @@
         "area_of_sky_covered": 0.7,
         "best_month_to_see": "May",
         "represents": "Hunting Dogs",
-        "history": "Canes Venatici was introduced in the 17th century by Johannes Hevelius and represents the hunting dogs of Bo\u00c3\u00b6tes, the Herdsman. This small northern constellation contains some fascinating deep-sky objects, including the famous Whirlpool Galaxy (M51). Despite its late addition to star maps, Canes Venatici has become a notable feature of the sky.",
-        "fun_fact": "These 'hunting dogs' were added in the 17th century\u00e2\u20ac\u201dprobably because Bo\u00c3\u00b6tes, the herdsman, needed some loyal companions in the sky.",
+        "history": "Canes Venatici was introduced in the 17th century by Johannes Hevelius and represents the hunting dogs of Boötes, the Herdsman. This small northern constellation contains some fascinating deep-sky objects, including the famous Whirlpool Galaxy (M51). Despite its late addition to star maps, Canes Venatici has become a notable feature of the sky.",
+        "fun_fact": "These 'hunting dogs' were added in the 17th century, probably because Botes, the herdsman, needed some loyal companions in the sky.",
         "image": "images\\canes-venatici.png"
     },
     {
@@ -163,8 +163,8 @@
         "area_of_sky_covered": 1,
         "best_month_to_see": "February",
         "represents": "Greater Dog",
-        "history": "Canis Major represents one of Orion\u00e2\u20ac\u2122s hunting dogs in Greek mythology. It is best known for containing Sirius, the brightest star in the night sky, sometimes called the \"Dog Star.\" This constellation has been recognized since antiquity and is a key part of winter sky observations.",
-        "fun_fact": "Home to Sirius, the brightest star in the night sky! It\u00e2\u20ac\u2122s also said to be Orion\u00e2\u20ac\u2122s faithful hunting dog.",
+        "history": "Canis Major represents one of Orion's hunting dogs in Greek mythology. It is best known for containing Sirius, the brightest star in the night sky, sometimes called the \"Dog Star.\" This constellation has been recognized since antiquity and is a key part of winter sky observations.",
+        "fun_fact": "Home to Sirius, the brightest star in the night sky! It's also said to be Orion's faithful hunting dog.",
         "image": "images\\canis-major.png"
     },
     {
@@ -175,7 +175,7 @@
         "area_of_sky_covered": 0.2,
         "best_month_to_see": "March",
         "represents": "Lesser Dog",
-        "history": "Like Canis Major, Canis Minor is also associated with Orion\u00e2\u20ac\u2122s hunting dogs. Though it is a small constellation, it contains Procyon, one of the brightest stars in the night sky. Canis Minor has been recognized since the time of Ptolemy and remains an important feature in celestial navigation.",
+        "history": "Like Canis Major, Canis Minor is also associated with Orion's hunting dogs. Though it is a small constellation, it contains Procyon, one of the brightest stars in the night sky. Canis Minor has been recognized since the time of Ptolemy and remains an important feature in celestial navigation.",
         "fun_fact": "The 'little dog' of the night sky may be small, but its star Procyon is one of the brightest in our galaxy.",
         "image": "images\\canis-minor.png"
     },
@@ -187,7 +187,7 @@
         "area_of_sky_covered": 0.7,
         "best_month_to_see": "September",
         "represents": "Sea Goat",
-        "history": "Capricornus is one of the oldest recognized constellations, dating back to the Sumerians around 2,000 BCE, who associated it with the god Enki, depicted as a half-goat, half-fish creature. In Greek mythology, it represents the goat Amalthea, who nursed the infant Zeus, or the goat-god Pan, who transformed himself into a sea creature to escape the monster Typhon. Capricornus is also one of the twelve zodiac constellations. \u00e2\u20ac\u2039",
+        "history": "Capricornus is one of the oldest recognized constellations, dating back to the Sumerians around 2,000 BCE, who associated it with the god Enki, depicted as a half-goat, half-fish creature. In Greek mythology, it represents the goat Amalthea, who nursed the infant Zeus, or the goat-god Pan, who transformed himself into a sea creature to escape the monster Typhon. Capricornus is also one of the twelve zodiac constellations.  ",
         "fun_fact": "Ever seen a sea-goat? Me neither. But this constellation represents Pan, the goat god who jumped into the sea and turned half-fish.",
         "image": "images\\capricornus.png"
     },
@@ -199,7 +199,7 @@
         "area_of_sky_covered": 1.6,
         "best_month_to_see": "March",
         "represents": "Keel",
-        "history": "Carina was once part of the larger constellation Argo Navis, representing the ship Argo from Greek mythology, which Jason and the Argonauts sailed in their quest for the Golden Fleece. In the 18th century, astronomer Nicolas-Louis de Lacaille divided Argo Navis into three smaller constellations: Carina (the keel), Vela (the sails), and Puppis (the stern). Carina contains Canopus, the second-brightest star in the night sky. \u00e2\u20ac\u2039",
+        "history": "Carina was once part of the larger constellation Argo Navis, representing the ship Argo from Greek mythology, which Jason and the Argonauts sailed in their quest for the Golden Fleece. In the 18th century, astronomer Nicolas-Louis de Lacaille divided Argo Navis into three smaller constellations: Carina (the keel), Vela (the sails), and Puppis (the stern). Carina contains Canopus, the second-brightest star in the night sky.  ",
         "fun_fact": "Once part of a massive ship-shaped constellation called Argo Navis, Carina is the 'keel' of the ship. Imagine sailing the stars!",
         "image": "images\\carina.png"
     },
@@ -211,7 +211,7 @@
         "area_of_sky_covered": 0.8,
         "best_month_to_see": "November",
         "represents": "Cassiopeia (Queen)",
-        "history": "Cassiopeia is a prominent northern constellation representing the vain queen Cassiopeia from Greek mythology, wife of King Cepheus and mother of Andromeda. According to legend, her boast about her unrivaled beauty angered the sea nymphs, leading Poseidon to send a sea monster to punish her kingdom. Cassiopeia was placed in the sky as a constellation, depicted sitting on her throne. \u00e2\u20ac\u2039",
+        "history": "Cassiopeia is a prominent northern constellation representing the vain queen Cassiopeia from Greek mythology, wife of King Cepheus and mother of Andromeda. According to legend, her boast about her unrivaled beauty angered the sea nymphs, leading Poseidon to send a sea monster to punish her kingdom. Cassiopeia was placed in the sky as a constellation, depicted sitting on her throne.  ",
         "fun_fact": "A vain queen who bragged too much and got stuck upside down in the sky as punishment. Ouch.",
         "image": "images\\cassiopeia.png"
     },
@@ -223,8 +223,8 @@
         "area_of_sky_covered": 2.6,
         "best_month_to_see": "May",
         "represents": "Centaur",
-        "history": "Centaurus is a large southern constellation representing the centaur, a creature with the upper body of a human and the lower body of a horse. It is often associated with Chiron, the wise and noble centaur from Greek mythology who tutored many heroes, including Hercules and Achilles. Centaurus contains Alpha Centauri, the closest star system to Earth. \u00e2\u20ac\u2039",
-        "fun_fact": "This constellation is home to Chiron, the kind and wise centaur\u00e2\u20ac\u201dbasically, the galaxy\u00e2\u20ac\u2122s original mentor.",
+        "history": "Centaurus is a large southern constellation representing the centaur, a creature with the upper body of a human and the lower body of a horse. It is often associated with Chiron, the wise and noble centaur from Greek mythology who tutored many heroes, including Hercules and Achilles. Centaurus contains Alpha Centauri, the closest star system to Earth.  ",
+        "fun_fact": "This constellation is home to Chiron, the kind and wise centaur - basically, the galaxy's original mentor.",
         "image": "images\\centaurus.png"
     },
     {
@@ -235,7 +235,7 @@
         "area_of_sky_covered": 1.4,
         "best_month_to_see": "November",
         "represents": "Cepheus (King)",
-        "history": "Cepheus represents King Cepheus of Ethiopia in Greek mythology, husband of Cassiopeia and father of Andromeda. Placed near his wife in the sky, Cepheus is depicted as a king holding a scepter. The constellation is relatively faint but holds significance due to its mythological associations. \u00e2\u20ac\u2039",
+        "history": "Cepheus represents King Cepheus of Ethiopia in Greek mythology, husband of Cassiopeia and father of Andromeda. Placed near his wife in the sky, Cepheus is depicted as a king holding a scepter. The constellation is relatively faint but holds significance due to its mythological associations.  ",
         "fun_fact": "King Cepheus might not be as famous as his wife Cassiopeia or daughter Andromeda, but at least he got a constellation out of it!",
         "image": "images\\cepheus.png"
     },
@@ -247,8 +247,8 @@
         "area_of_sky_covered": 3,
         "best_month_to_see": "November",
         "represents": "Whale (Sea Monster",
-        "history": "Cetus represents the sea monster sent by Poseidon to ravage the land of King Cepheus after his wife, Cassiopeia, boasted about her beauty. The creature was defeated by Perseus when he rescued Andromeda. Cetus is one of the largest constellations in the sky and has been known since antiquity. \u00e2\u20ac\u2039",
-        "fun_fact": "This sea monster was supposed to eat Andromeda, but Perseus turned it to stone with Medusa\u00e2\u20ac\u2122s head. Sorry, Cetus.",
+        "history": "Cetus represents the sea monster sent by Poseidon to ravage the land of King Cepheus after his wife, Cassiopeia, boasted about her beauty. The creature was defeated by Perseus when he rescued Andromeda. Cetus is one of the largest constellations in the sky and has been known since antiquity.  ",
+        "fun_fact": "This sea monster was supposed to eat Andromeda, but Perseus turned it to stone with Medusa's head. Sorry, Cetus.",
         "image": "images\\cetus.png"
     },
     {
@@ -259,8 +259,8 @@
         "area_of_sky_covered": 0.3,
         "best_month_to_see": "April",
         "represents": "Chameleon",
-        "history": "Chamaeleon is a small constellation introduced in the late 16th century by Dutch navigators Pieter Dirkszoon Keyser and Frederick de Houtman. It represents the chameleon, a lizard known for its ability to change color. Chamaeleon is located in the southern sky and is one of the 12 constellations introduced by Keyser and de Houtman. \u00e2\u20ac\u2039",
-        "fun_fact": "This tiny Southern Hemisphere constellation is named after the color-changing lizard, but sadly, the stars don\u00e2\u20ac\u2122t change color.",
+        "history": "Chamaeleon is a small constellation introduced in the late 16th century by Dutch navigators Pieter Dirkszoon Keyser and Frederick de Houtman. It represents the chameleon, a lizard known for its ability to change color. Chamaeleon is located in the southern sky and is one of the 12 constellations introduced by Keyser and de Houtman.  ",
+        "fun_fact": "This tiny Southern Hemisphere constellation is named after the color-changing lizard, but sadly, the stars don't change color.",
         "image": "images\\chamaeleon.png"
     },
     {
@@ -271,8 +271,8 @@
         "area_of_sky_covered": 0.3,
         "best_month_to_see": "June",
         "represents": "Compass (drafting tool)",
-        "history": "Circinus, meaning \"the compass\" in Latin, was introduced by Nicolas-Louis de Lacaille in the 18th century. It represents the drawing tool used in geometry and navigation. Circinus is a small, faint constellation located in the southern hemisphere near Centaurus and Lupus. \u00e2\u20ac\u2039",
-        "fun_fact": "Representing a drafting compass, this constellation is the universe\u00e2\u20ac\u2122s way of saying, 'Math is everywhere!'",
+        "history": "Circinus, meaning \"the compass\" in Latin, was introduced by Nicolas-Louis de Lacaille in the 18th century. It represents the drawing tool used in geometry and navigation. Circinus is a small, faint constellation located in the southern hemisphere near Centaurus and Lupus.  ",
+        "fun_fact": "Representing a drafting compass, this constellation is the universe's way of saying, 'Math is everywhere!'",
         "image": "images\\circinus.png"
     },
     {
@@ -283,8 +283,8 @@
         "area_of_sky_covered": 0.8,
         "best_month_to_see": "January",
         "represents": "Dove",
-        "history": "Columba was introduced by Dutch astronomer Petrus Plancius in the late 16th century. It represents the dove and is sometimes associated with the dove that informed Noah of receding floodwaters in biblical tradition. Columba is located near Canis Major in the southern sky. \u00e2\u20ac\u2039",
-        "fun_fact": "The 'Dove' constellation was added in the 1500s\u00e2\u20ac\u201dpossibly to represent Noah\u00e2\u20ac\u2122s dove from the biblical flood story.",
+        "history": "Columba was introduced by Dutch astronomer Petrus Plancius in the late 16th century. It represents the dove and is sometimes associated with the dove that informed Noah of receding floodwaters in biblical tradition. Columba is located near Canis Major in the southern sky.  ",
+        "fun_fact": "The 'Dove' constellation was added in the 1500s possibly to represent Noah's dove from the biblical flood story.",
         "image": "images\\columba.png"
     },
     {
@@ -294,9 +294,9 @@
         "first_appearance": "Ancient",
         "area_of_sky_covered": 0.5,
         "best_month_to_see": "May",
-        "represents": "Berenice\u00e2\u20ac\u2122s Hair",
-        "history": "Coma Berenices represents the hair of Queen Berenice II of Egypt. According to legend, she sacrificed her long hair to the gods for her husband's safe return from war. The constellation was recognized by the Greeks as a distinct grouping and was later included in star catalogs. Coma Berenices is notable for containing a rich star cluster. \u00e2\u20ac\u2039",
-        "fun_fact": "Named after a real queen, Berenice II, who sacrificed her hair for the gods\u00e2\u20ac\u201dher locks were so glorious, they became a constellation!",
+        "represents": "Berenice's Hair",
+        "history": "Coma Berenices represents the hair of Queen Berenice II of Egypt. According to legend, she sacrificed her long hair to the gods for her husband's safe return from war. The constellation was recognized by the Greeks as a distinct grouping and was later included in star catalogs. Coma Berenices is notable for containing a rich star cluster.  ",
+        "fun_fact": "Named after a real queen, Berenice II, who sacrificed her hair for the gods. Her locks were so glorious, they became a constellation!",
         "image": "images\\coma-berenices.png"
     },
     {
@@ -307,8 +307,8 @@
         "area_of_sky_covered": 0.3,
         "best_month_to_see": "August",
         "represents": "Southern Crown",
-        "history": "Corona Australis, meaning \"the southern crown,\" is a small constellation located in the southern hemisphere. It was first cataloged by the Greek astronomer Ptolemy in the 2nd century. The constellation is sometimes associated with the myth of Dionysus, representing the crown the god placed in the sky after freeing his mother Semele from the underworld. \u00e2\u20ac\u2039",
-        "fun_fact": "A small, dim constellation known as the 'Southern Crown'\u00e2\u20ac\u201dbasically a royal tiara in the sky.",
+        "history": "Corona Australis, meaning \"the southern crown,\" is a small constellation located in the southern hemisphere. It was first cataloged by the Greek astronomer Ptolemy in the 2nd century. The constellation is sometimes associated with the myth of Dionysus, representing the crown the god placed in the sky after freeing his mother Semele from the underworld.  ",
+        "fun_fact": "A small, dim constellation known as the 'Southern Crown' - basically a royal tiara in the sky.",
         "image": "images\\corona-australis.png"
     },
     {
@@ -319,7 +319,7 @@
         "area_of_sky_covered": 0.3,
         "best_month_to_see": "June",
         "represents": "Northern Crown",
-        "history": "Corona Borealis, meaning \"the northern crown,\" is a small constellation in the northern hemisphere. In Greek mythology, it represents the crown given by Dionysus to Ariadne upon their marriage. The constellation is notable for its distinctive semicircular arc of stars. \u00e2\u20ac\u2039",
+        "history": "Corona Borealis, meaning \"the northern crown,\" is a small constellation in the northern hemisphere. In Greek mythology, it represents the crown given by Dionysus to Ariadne upon their marriage. The constellation is notable for its distinctive semicircular arc of stars.  ",
         "fun_fact": "The 'Northern Crown' was a wedding gift from the god Dionysus to Ariadne. Talk about celestial jewelry!",
         "image": "images\\corona-borealis.png"
     },
@@ -332,7 +332,7 @@
         "best_month_to_see": "May",
         "represents": "Crow",
         "history": "Corvus is a small constellation representing a crow or raven in Greek mythology. It is linked to the god Apollo, who sent a crow to fetch water. The crow became distracted by a fig tree and returned late, bringing a water snake (Hydra) as an excuse. Apollo, angered by the deception, cast the crow, the cup (Crater), and the snake (Hydra) into the sky.",
-        "fun_fact": "This crow was Apollo\u00e2\u20ac\u2122s messenger, but he got caught slacking off and was thrown into the sky as punishment.",
+        "fun_fact": "This crow was Apollo's messenger, but he got caught slacking off and was thrown into the sky as punishment.",
         "image": "images\\corvus.png"
     },
     {
@@ -344,7 +344,7 @@
         "best_month_to_see": "April",
         "represents": "Cup",
         "history": "Crater represents the cup of Apollo in Greek mythology. According to legend, it was carried by the crow Corvus, but due to the crow's failure to complete its task, Apollo placed it in the sky along with Corvus and Hydra as punishment.",
-        "fun_fact": "A celestial cup! It was said to belong to Apollo, though it\u00e2\u20ac\u2122s unclear whether it was for ambrosia or something stronger.",
+        "fun_fact": "A celestial cup! It was said to belong to Apollo, though it's unclear whether it was for ambrosia or something stronger.",
         "image": "images\\crater.png"
     },
     {
@@ -356,7 +356,7 @@
         "best_month_to_see": "May",
         "represents": "Southern Cross",
         "history": "Crux is a small but significant southern constellation representing a cross. Though it was visible to ancient Greeks, it later became primarily associated with the Age of Exploration, helping sailors navigate. Crux contains Acrux, one of the brightest stars in the sky, and is deeply significant to cultures in the Southern Hemisphere.Cygnus represents a swan and is linked to multiple Greek myths. One legend associates it with Orpheus, who was transformed into a swan upon his death and placed in the sky next to Lyra. Another story ties it to Zeus, who took the form of a swan to seduce Leda. It contains Deneb, part of the Summer Triangle.",
-        "fun_fact": "The Southern Cross is the smallest constellation but one of the most famous in the Southern Hemisphere\u00e2\u20ac\u201dit's even on some national flags!",
+        "fun_fact": "The Southern Cross is the smallest constellation but one of the most famous in the Southern Hemisphere. It's even on some national flags!",
         "image": "images\\crux.png"
     },
     {
@@ -368,7 +368,7 @@
         "best_month_to_see": "September",
         "represents": "Swan",
         "history": "Cygnus represents a swan and is linked to multiple Greek myths. One legend associates it with Orpheus, who was transformed into a swan upon his death and placed in the sky next to Lyra. Another story ties it to Zeus, who took the form of a swan to seduce Leda. It contains Deneb, part of the Summer Triangle.",
-        "fun_fact": "The Swan, but really Zeus in disguise\u00e2\u20ac\u201dhe had a habit of turning into birds to woo mortal women!",
+        "fun_fact": "The Swan, but really Zeus in disguise. He had a habit of turning into birds to woo mortal women!",
         "image": "images\\cygnus.png"
     },
     {
@@ -392,7 +392,7 @@
         "best_month_to_see": "January",
         "represents": "Dolphinfish",
         "history": "Dorado is a southern constellation introduced in the late 16th century by Dutch explorers. It represents the dorado fish (or mahi-mahi) and is best known for containing the Large Magellanic Cloud, a satellite galaxy of the Milky Way.",
-        "fun_fact": "Named after the dolphinfish, not an actual dolphin. But it\u00e2\u20ac\u2122s home to the Large Magellanic Cloud, a mini-galaxy orbiting the Milky Way!",
+        "fun_fact": "Named after the dolphinfish, not an actual dolphin. But it's home to the Large Magellanic Cloud, a mini-galaxy orbiting the Milky Way!",
         "image": "images\\dorado.png"
     },
     {
@@ -416,7 +416,7 @@
         "best_month_to_see": "September",
         "represents": "Little Horse (Foal)",
         "history": "Equuleus is the second smallest constellation and represents a foal or small horse. It is linked to Hipparchus, a winged horse related to Pegasus, and was cataloged by Ptolemy in the 2nd century.",
-        "fun_fact": "A baby horse in the sky! It\u00e2\u20ac\u2122s said to be the less-famous brother of Pegasus.",
+        "fun_fact": "A baby horse in the sky! It's said to be the less-famous brother of Pegasus.",
         "image": "images\\equuleus.png"
     },
     {
@@ -427,7 +427,7 @@
         "area_of_sky_covered": 3.17,
         "best_month_to_see": "December",
         "represents": "Eridanus (River)",
-        "history": "Eridanus is one of the longest constellations, representing a great celestial river. In Greek mythology, it is associated with the story of Phaethon, the son of Helios, who attempted to drive his father\u00e2\u20ac\u2122s chariot of the sun. Unable to control the fiery horses, Phaethon lost control, scorching parts of the Earth before Zeus struck him down with a thunderbolt. His lifeless body fell into a river, believed to be the Eridanus River, and was later placed in the sky as a warning. The constellation contains Achernar, one of the brightest stars in the night sky.",
+        "history": "Eridanus is one of the longest constellations, representing a great celestial river. In Greek mythology, it is associated with the story of Phaethon, the son of Helios, who attempted to drive his father's chariot of the sun. Unable to control the fiery horses, Phaethon lost control, scorching parts of the Earth before Zeus struck him down with a thunderbolt. His lifeless body fell into a river, believed to be the Eridanus River, and was later placed in the sky as a warning. The constellation contains Achernar, one of the brightest stars in the night sky.",
         "fun_fact": "A river of stars, said to be the place where Phaethon crashed after failing to drive the sun chariot!",
         "image": "images\\eridanus.png"
     },
@@ -452,7 +452,7 @@
         "best_month_to_see": "February",
         "represents": "Twins",
         "history": "Gemini is one of the zodiac constellations, representing the twins Castor and Pollux from Greek mythology. The twins were sons of Zeus and Leda, and upon their death, Zeus placed them in the sky. The constellation is known for its two bright stars, Castor and Pollux.",
-        "fun_fact": "The famous twins, Castor and Pollux, so inseparable that Zeus turned them into a constellation so they\u00e2\u20ac\u2122d never be apart!",
+        "fun_fact": "The famous twins, Castor and Pollux, so inseparable that Zeus turned them into a constellation so they'd never be apart!",
         "image": "images\\gemini.png"
     },
     {
@@ -464,7 +464,7 @@
         "best_month_to_see": "October",
         "represents": "Crane",
         "history": "Grus, meaning \"The Crane\", is a southern constellation first introduced by Dutch explorers in the late 16th century. The crane was considered a symbol of longevity and vigilance in many ancient cultures. Grus was originally part of Piscis Austrinus (The Southern Fish) but was later designated as a separate constellation.",
-        "fun_fact": "A crane in the sky\u00e2\u20ac\u201done of many animals added to the stars by Dutch explorers in the 1500s!",
+        "fun_fact": "A crane in the sky, one of many animals added to the stars by Dutch explorers in the 1500s!",
         "image": "images\\grus.png"
     },
     {
@@ -547,8 +547,8 @@
         "area_of_sky_covered": 2.3,
         "best_month_to_see": "April",
         "represents": "Lion",
-        "history": "Leo is one of the most well-known zodiac constellations and has been recognized since ancient times. In Greek mythology, it represents the Nemean Lion, a massive and invulnerable beast that terrorized the region of Nemea. As part of his Twelve Labors, Hercules was tasked with slaying the lion. Upon realizing that its hide was impervious to weapons, he strangled the beast with his bare hands. Zeus later placed the lion in the sky as a constellation to honor Hercules\u00e2\u20ac\u2122 feat. The constellation\u00e2\u20ac\u2122s brightest star, Regulus, is often called the \"heart of the lion.\" Leo has also been associated with the Sphinx of ancient Egypt and has held significance in Babylonian and Persian cultures.",
-        "fun_fact": "The Nemean Lion defeated by Hercules\u00e2\u20ac\u201dits skin was indestructible, which is why he had to strangle it!",
+        "history": "Leo is one of the most well-known zodiac constellations and has been recognized since ancient times. In Greek mythology, it represents the Nemean Lion, a massive and invulnerable beast that terrorized the region of Nemea. As part of his Twelve Labors, Hercules was tasked with slaying the lion. Upon realizing that its hide was impervious to weapons, he strangled the beast with his bare hands. Zeus later placed the lion in the sky as a constellation to honor Hercules' feat. The constellation's brightest star, Regulus, is often called the \"heart of the lion.\" Leo has also been associated with the Sphinx of ancient Egypt and has held significance in Babylonian and Persian cultures.",
+        "fun_fact": "The Nemean Lion defeated by Hercules. Its skin was indestructible, which is why he had to strangle it!",
         "image": "images\\leo.png"
     },
     {
@@ -571,8 +571,8 @@
         "area_of_sky_covered": 0.53,
         "best_month_to_see": "January",
         "represents": "Hare",
-        "history": "Lepus is an ancient constellation located directly beneath Orion, the great hunter, and near Canis Major, one of Orion\u00e2\u20ac\u2122s hunting dogs. It is often depicted as the prey of Orion, who is forever chasing it across the night sky. While the origins of Lepus are uncertain, the constellation has been recognized since at least the time of Ptolemy, who included it in his star catalog in the 2nd century. Some myths suggest that Lepus represents the swift-footed hare that was a gift to the gods, while others associate it with rabbits of the moon, a common theme in many ancient cultures, including Chinese and Native American folklore.",
-        "fun_fact": "A rabbit forever hiding under Orion\u00e2\u20ac\u2122s feet\u00e2\u20ac\u201done of the only celestial bunnies out there!",
+        "history": "Lepus is an ancient constellation located directly beneath Orion, the great hunter, and near Canis Major, one of Orion's hunting dogs. It is often depicted as the prey of Orion, who is forever chasing it across the night sky. While the origins of Lepus are uncertain, the constellation has been recognized since at least the time of Ptolemy, who included it in his star catalog in the 2nd century. Some myths suggest that Lepus represents the swift-footed hare that was a gift to the gods, while others associate it with rabbits of the moon, a common theme in many ancient cultures, including Chinese and Native American folklore.",
+        "fun_fact": "A rabbit forever hiding under Orion's feet - one of the only celestial bunnies out there!",
         "image": "images\\lepus.png"
     },
     {
@@ -583,8 +583,8 @@
         "area_of_sky_covered": 0.89,
         "best_month_to_see": "June",
         "represents": "Scales",
-        "history": "Libra is one of the zodiac constellations and is unique in that it is the only zodiac sign that represents an inanimate object rather than a living being. The ancient Babylonians originally saw it as part of Scorpius, representing the Scorpion\u00e2\u20ac\u2122s claws. The Romans later redefined it as a separate constellation, associating it with the scales of justice held by Astraea, the goddess of justice (often linked with Virgo). Libra is home to Zubenelgenubi and Zubeneschamali, two bright stars whose names mean \"southern claw\" and \"northern claw,\" remnants of its earlier connection to Scorpius.",
-        "fun_fact": "The scales of justice, and the only zodiac sign that isn\u00e2\u20ac\u2122t a person or an animal!",
+        "history": "Libra is one of the zodiac constellations and is unique in that it is the only zodiac sign that represents an inanimate object rather than a living being. The ancient Babylonians originally saw it as part of Scorpius, representing the Scorpion's claws. The Romans later redefined it as a separate constellation, associating it with the scales of justice held by Astraea, the goddess of justice (often linked with Virgo). Libra is home to Zubenelgenubi and Zubeneschamali, two bright stars whose names mean \"southern claw\" and \"northern claw,\" remnants of its earlier connection to Scorpius.",
+        "fun_fact": "The scales of justice, and the only zodiac sign that isn't a person or an animal!",
         "image": "images\\libra.png"
     },
     {
@@ -619,7 +619,7 @@
         "area_of_sky_covered": 0.35,
         "best_month_to_see": "August",
         "represents": "Lyre (Harp)",
-        "history": "Lyra is a small but significant constellation linked to Orpheus, the legendary musician of Greek mythology. It represents the lyre (a stringed musical instrument) given to Orpheus by Apollo. Orpheus played the lyre so beautifully that he could charm animals, trees, and even the gods. After his tragic death, Zeus placed the lyre in the sky. Vega, the constellation\u00e2\u20ac\u2122s brightest star, is one of the most luminous stars visible from Earth and is part of the Summer Triangle.",
+        "history": "Lyra is a small but significant constellation linked to Orpheus, the legendary musician of Greek mythology. It represents the lyre (a stringed musical instrument) given to Orpheus by Apollo. Orpheus played the lyre so beautifully that he could charm animals, trees, and even the gods. After his tragic death, Zeus placed the lyre in the sky. Vega, the constellation's brightest star, is one of the most luminous stars visible from Earth and is part of the Summer Triangle.",
         "fun_fact": "",
         "image": "images\\lyra.png"
     },
@@ -643,7 +643,7 @@
         "area_of_sky_covered": 0.54,
         "best_month_to_see": "September",
         "represents": "Microscope",
-        "history": "Microscopium is a modern constellation, introduced by Lacaille in the 18th century during the Age of Enlightenment. Named after the microscope, it symbolizes the scientific advancements of the time. While it is a faint constellation with no particularly bright stars, it reflects humanity\u00e2\u20ac\u2122s pursuit of knowledge.",
+        "history": "Microscopium is a modern constellation, introduced by Lacaille in the 18th century during the Age of Enlightenment. Named after the microscope, it symbolizes the scientific advancements of the time. While it is a faint constellation with no particularly bright stars, it reflects humanity's pursuit of knowledge.",
         "fun_fact": "",
         "image": "images\\microscopium.png"
     },
@@ -667,7 +667,7 @@
         "area_of_sky_covered": 0.33,
         "best_month_to_see": "May",
         "represents": "Fly",
-        "history": "Musca is a southern constellation introduced by Dutch explorers in the late 16th century. It was originally called \"Apis\" (the Bee) but was later renamed Musca (the Fly). It is one of the few constellations named after an insect. Though small, it is important in the southern hemisphere\u00e2\u20ac\u2122s celestial mapping.",
+        "history": "Musca is a southern constellation introduced by Dutch explorers in the late 16th century. It was originally called \"Apis\" (the Bee) but was later renamed Musca (the Fly). It is one of the few constellations named after an insect. Though small, it is important in the southern hemisphere's celestial mapping.",
         "fun_fact": "",
         "image": "images\\musca.png"
     },
@@ -679,7 +679,7 @@
         "area_of_sky_covered": 0.4,
         "best_month_to_see": "July",
         "represents": "Level",
-        "history": "Norma is another modern constellation, named by Lacaille in the 18th century. It represents a carpenter\u00e2\u20ac\u2122s square or drafting tool, reflecting the Age of Enlightenment\u00e2\u20ac\u2122s emphasis on engineering and science. Norma is home to several interesting binary star systems and deep-sky objects.",
+        "history": "Norma is another modern constellation, named by Lacaille in the 18th century. It represents a carpenter's square or drafting tool, reflecting the Age of Enlightenment's emphasis on engineering and science. Norma is home to several interesting binary star systems and deep-sky objects.",
         "fun_fact": "",
         "image": "images\\norma.png"
     },
@@ -703,7 +703,7 @@
         "area_of_sky_covered": 2.3,
         "best_month_to_see": "July",
         "represents": "Serpent Bearer",
-        "history": "Ophiuchus is one of the largest constellations and is often called the \"13th zodiac sign\", though it is not traditionally included in astrology. It represents Asclepius, the Greek god of medicine, who was said to have the ability to bring the dead back to life. The constellation is depicted as a man holding a serpent, symbolizing wisdom and healing. The serpent itself is represented by the adjacent Serpens constellation. Ophiuchus is home to several globular clusters and Barnard\u00e2\u20ac\u2122s Star, one of the closest stars to Earth.",
+        "history": "Ophiuchus is one of the largest constellations and is often called the \"13th zodiac sign\", though it is not traditionally included in astrology. It represents Asclepius, the Greek god of medicine, who was said to have the ability to bring the dead back to life. The constellation is depicted as a man holding a serpent, symbolizing wisdom and healing. The serpent itself is represented by the adjacent Serpens constellation. Ophiuchus is home to several globular clusters and Barnard's Star, one of the closest stars to Earth.",
         "fun_fact": "The 'Serpent Bearer', a legendary healer. Some people call him the forgotten zodiac sign!",
         "image": "images\\ophiuchus.png"
     },
@@ -716,7 +716,7 @@
         "best_month_to_see": "January",
         "represents": "Orion (the Hunter)",
         "history": "Orion is one of the most famous constellations, easily recognizable by its three-star belt. In Greek mythology, Orion was a mighty hunter, sometimes described as the son of Poseidon. He boasted that he could kill all the wild animals on Earth, angering Artemis or Gaia, who sent a giant scorpion (Scorpius) to slay him. After his death, Zeus placed him in the sky, where he eternally hunts near his dogs, Canis Major and Canis Minor. Orion contains several bright stars, including Betelgeuse (a red supergiant) and Rigel (a blue supergiant), as well as the Orion Nebula (M42), one of the most studied celestial objects.",
-        "fun_fact": "One of the most famous constellations! A hunter who was either killed by a scorpion or accidentally shot by Artemis\u00e2\u20ac\u201deither way, he ended up in the stars!",
+        "fun_fact": "One of the most famous constellations! A hunter who was either killed by a scorpion or accidentally shot by Artemis - either way, he ended up in the stars!",
         "image": "images\\orion.png"
     },
     {
@@ -740,7 +740,7 @@
         "best_month_to_see": "October",
         "represents": "Pegasus",
         "history": "Pegasus is a large mythological constellation named after the winged horse of Greek legend. According to myth, Pegasus sprang from the blood of Medusa when Perseus beheaded her. The horse later helped the hero Bellerophon defeat the Chimera. However, when Bellerophon attempted to ride Pegasus to Olympus, Zeus sent a gadfly to sting the horse, causing Bellerophon to fall back to Earth. Pegasus was then placed among the stars. The constellation is home to the Great Square of Pegasus, a prominent asterism, and 51 Pegasi, the first Sun-like star discovered to host an exoplanet",
-        "fun_fact": "The famous flying horse, born when Perseus cut off Medusa\u00e2\u20ac\u2122s head!",
+        "fun_fact": "The famous flying horse, born when Perseus cut off Medusa's head!",
         "image": "images\\pegasus.png"
     },
     {
@@ -751,7 +751,7 @@
         "area_of_sky_covered": 1.2,
         "best_month_to_see": "December",
         "represents": "Perseus",
-        "history": "Perseus is a constellation named after the legendary Greek hero Perseus, who slayed Medusa and rescued Andromeda. He is often depicted holding Medusa\u00e2\u20ac\u2122s severed head, with the bright star Algol representing her \"blinking eye\". Algol is actually one of the first discovered eclipsing binary stars, which causes its brightness to vary over time. The Perseus constellation is home to the Perseus Cluster and the famous Perseid meteor shower, which originates from debris left by Comet Swift-Tuttle.",
+        "history": "Perseus is a constellation named after the legendary Greek hero Perseus, who slayed Medusa and rescued Andromeda. He is often depicted holding Medusa's severed head, with the bright star Algol representing her \"blinking eye\". Algol is actually one of the first discovered eclipsing binary stars, which causes its brightness to vary over time. The Perseus constellation is home to the Perseus Cluster and the famous Perseid meteor shower, which originates from debris left by Comet Swift-Tuttle.",
         "fun_fact": "",
         "image": "images\\perseus.png"
     },
@@ -775,7 +775,7 @@
         "area_of_sky_covered": 1.1,
         "best_month_to_see": "November",
         "represents": "Fishes",
-        "history": "Pisces is a zodiac constellation with roots in Babylonian and Greek mythology. In Greek stories, Pisces represents Aphrodite (Venus) and her son Eros (Cupid), who transformed into fish to escape the monster Typhon. They tied themselves together with a rope so they wouldn\u00e2\u20ac\u2122t be separated, which is why the constellation is often depicted as two fish connected by a cord. Pisces is home to the Vernal Equinox, the point where the Sun crosses the celestial equator, marking the beginning of spring.",
+        "history": "Pisces is a zodiac constellation with roots in Babylonian and Greek mythology. In Greek stories, Pisces represents Aphrodite (Venus) and her son Eros (Cupid), who transformed into fish to escape the monster Typhon. They tied themselves together with a rope so they wouldn't be separated, which is why the constellation is often depicted as two fish connected by a cord. Pisces is home to the Vernal Equinox, the point where the Sun crosses the celestial equator, marking the beginning of spring.",
         "fun_fact": "The fish of the zodiac, representing Aphrodite and Eros, who turned into fish to escape a monster!",
         "image": "images\\pisces.png"
     },
@@ -787,7 +787,7 @@
         "area_of_sky_covered": 0.3,
         "best_month_to_see": "February",
         "represents": "Easel",
-        "history": "Pictor is one of the small, modern constellations introduced by Nicolas-Louis de Lacaille in the 18th century. It represents an artist\u00e2\u20ac\u2122s easel, reflecting the Enlightenment\u00e2\u20ac\u2122s focus on science and the arts. Though relatively faint, Pictor is notable for hosting Pictor A, a powerful radio galaxy with a massive black hole.",
+        "history": "Pictor is one of the small, modern constellations introduced by Nicolas-Louis de Lacaille in the 18th century. It represents an artist's easel, reflecting the Enlightenment's focus on science and the arts. Though relatively faint, Pictor is notable for hosting Pictor A, a powerful radio galaxy with a massive black hole.",
         "fun_fact": "",
         "image": "images\\pictor.png"
     },
@@ -822,8 +822,8 @@
         "first_appearance": "18th century",
         "area_of_sky_covered": 0.3,
         "best_month_to_see": "February",
-        "represents": "Compass (mariner\u00e2\u20ac\u2122s compass)",
-        "history": "Pyxis is another modern constellation introduced by Lacaille in the 18th century. It represents a mariner\u00e2\u20ac\u2122s compass, reflecting the importance of navigation during the Age of Exploration. Pyxis is located near Puppis, leading some to suggest it was originally part of Argo Navis, symbolizing the ship\u00e2\u20ac\u2122s compass. One of its most famous stars is T Pyxidis, a recurrent nova system.",
+        "represents": "Compass (mariner's compass)",
+        "history": "Pyxis is another modern constellation introduced by Lacaille in the 18th century. It represents a mariner's compass, reflecting the importance of navigation during the Age of Exploration. Pyxis is located near Puppis, leading some to suggest it was originally part of Argo Navis, symbolizing the ship's compass. One of its most famous stars is T Pyxidis, a recurrent nova system.",
         "fun_fact": "",
         "image": "images\\pyxis.png"
     },
@@ -835,7 +835,7 @@
         "area_of_sky_covered": 0.3,
         "best_month_to_see": "January",
         "represents": "Reticle",
-        "history": "Reticulum is a small, modern constellation introduced by Nicolas-Louis de Lacaille in the 18th century. It represents a reticle, the crosshairs in a telescope\u00e2\u20ac\u2122s eyepiece, used for astronomical measurements. Unlike the ancient mythological constellations, Reticulum reflects the scientific advancements of the Enlightenment. Despite its small size, it is home to NGC 1559, a barred spiral galaxy.",
+        "history": "Reticulum is a small, modern constellation introduced by Nicolas-Louis de Lacaille in the 18th century. It represents a reticle, the crosshairs in a telescope's eyepiece, used for astronomical measurements. Unlike the ancient mythological constellations, Reticulum reflects the scientific advancements of the Enlightenment. Despite its small size, it is home to NGC 1559, a barred spiral galaxy.",
         "fun_fact": "",
         "image": "images\\reticulum.png"
     },
@@ -847,7 +847,7 @@
         "area_of_sky_covered": 0.2,
         "best_month_to_see": "August",
         "represents": "Arrow",
-        "history": "Sagitta, Latin for \"arrow\", is one of the smallest and oldest constellations, cataloged by Ptolemy in the 2nd century. Despite its size, it was recognized by the ancient Greeks and Romans, who saw it as an arrow shot by Hercules to slay the Stymphalian birds (one of his Twelve Labors). Some myths also associate it with the arrow of Eros (Cupid) or Apollo\u00e2\u20ac\u2122s arrow, which struck the Cyclops.",
+        "history": "Sagitta, Latin for \"arrow\", is one of the smallest and oldest constellations, cataloged by Ptolemy in the 2nd century. Despite its size, it was recognized by the ancient Greeks and Romans, who saw it as an arrow shot by Hercules to slay the Stymphalian birds (one of his Twelve Labors). Some myths also associate it with the arrow of Eros (Cupid) or Apollo's arrow, which struck the Cyclops.",
         "fun_fact": "",
         "image": "images\\sagitta.png"
     },
@@ -859,7 +859,7 @@
         "area_of_sky_covered": 2.8,
         "best_month_to_see": "August",
         "represents": "Archer",
-        "history": "Sagittarius is one of the twelve zodiac constellations, linked to Chiron, the wise centaur from Greek mythology. Chiron was known as a teacher of heroes, including Achilles and Hercules. He was placed in the sky as a centaur drawing a bow, symbolizing wisdom and skill in archery. Sagittarius is one of the richest constellations in deep-sky objects because it lies in the direction of the Milky Way\u00e2\u20ac\u2122s center. It contains the Lagoon Nebula (M8), Trifid Nebula (M20), and the supermassive black hole at the galaxy\u00e2\u20ac\u2122s core, Sagittarius A*.",
+        "history": "Sagittarius is one of the twelve zodiac constellations, linked to Chiron, the wise centaur from Greek mythology. Chiron was known as a teacher of heroes, including Achilles and Hercules. He was placed in the sky as a centaur drawing a bow, symbolizing wisdom and skill in archery. Sagittarius is one of the richest constellations in deep-sky objects because it lies in the direction of the Milky Way's center. It contains the Lagoon Nebula (M8), Trifid Nebula (M20), and the supermassive black hole at the galaxy's core, Sagittarius A*.",
         "fun_fact": "The archer centaur, sometimes linked to Chiron, the smartest and kindest of all centaurs!",
         "image": "images\\sagittarius.png"
     },
@@ -883,7 +883,7 @@
         "area_of_sky_covered": 0.5,
         "best_month_to_see": "October",
         "represents": "Sculptor",
-        "history": "Sculptor is a modern constellation, introduced by Lacaille in the 18th century. Originally named \"Apparatus Sculptoris\", it represented an artist\u00e2\u20ac\u2122s workshop. It was later shortened to Sculptor. This constellation is best known for containing the Sculptor Galaxy (NGC 253), one of the closest spiral galaxies to Earth.",
+        "history": "Sculptor is a modern constellation, introduced by Lacaille in the 18th century. Originally named \"Apparatus Sculptoris\", it represented an artist's workshop. It was later shortened to Sculptor. This constellation is best known for containing the Sculptor Galaxy (NGC 253), one of the closest spiral galaxies to Earth.",
         "fun_fact": "",
         "image": "images\\sculptor.png"
     },
@@ -907,7 +907,7 @@
         "area_of_sky_covered": 1.0,
         "best_month_to_see": "July",
         "represents": "Snake",
-        "history": "Serpens is unique among constellations because it is split into two parts: Serpens Caput (the Serpent\u00e2\u20ac\u2122s Head) and Serpens Cauda (the Serpent\u00e2\u20ac\u2122s Tail), which are separated by Ophiuchus, the Serpent Bearer. It represents the serpent held by Asclepius, the Greek god of medicine, symbolizing healing and renewal. This association remains today in the Rod of Asclepius, a medical symbol. Serpens is home to the Eagle Nebula (M16) and the famous Pillars of Creation.",
+        "history": "Serpens is unique among constellations because it is split into two parts: Serpens Caput (the Serpent's Head) and Serpens Cauda (the Serpent's Tail), which are separated by Ophiuchus, the Serpent Bearer. It represents the serpent held by Asclepius, the Greek god of medicine, symbolizing healing and renewal. This association remains today in the Rod of Asclepius, a medical symbol. Serpens is home to the Eagle Nebula (M16) and the famous Pillars of Creation.",
         "fun_fact": "",
         "image": "images\\serpens-caput.jpg"
 
@@ -920,7 +920,7 @@
         "area_of_sky_covered": 1.0,
         "best_month_to_see": "July",
         "represents": "Snake",
-        "history": "Serpens is unique among constellations because it is split into two parts: Serpens Caput (the Serpent\u00e2\u20ac\u2122s Head) and Serpens Cauda (the Serpent\u00e2\u20ac\u2122s Tail), which are separated by Ophiuchus, the Serpent Bearer. It represents the serpent held by Asclepius, the Greek god of medicine, symbolizing healing and renewal. This association remains today in the Rod of Asclepius, a medical symbol. Serpens is home to the Eagle Nebula (M16) and the famous Pillars of Creation.",
+        "history": "Serpens is unique among constellations because it is split into two parts: Serpens Caput (the Serpent's Head) and Serpens Cauda (the Serpent's Tail), which are separated by Ophiuchus, the Serpent Bearer. It represents the serpent held by Asclepius, the Greek god of medicine, symbolizing healing and renewal. This association remains today in the Rod of Asclepius, a medical symbol. Serpens is home to the Eagle Nebula (M16) and the famous Pillars of Creation.",
         "fun_fact": "",
         "image": "images\\serpens-cauda.jpg"
     },
@@ -956,7 +956,7 @@
         "area_of_sky_covered": 0.6,
         "best_month_to_see": "August",
         "represents": "Telescope",
-        "history": "Telescopium is a southern constellation, created by Lacaille in the 18th century, representing the invention of the telescope. It does not have any particularly bright stars but symbolizes humanity\u00e2\u20ac\u2122s advances in astronomy and science.",
+        "history": "Telescopium is a southern constellation, created by Lacaille in the 18th century, representing the invention of the telescope. It does not have any particularly bright stars but symbolizes humanity's advances in astronomy and science.",
         "fun_fact": "",
         "image": "images\\telescopium.png"
     },
@@ -1052,7 +1052,7 @@
         "area_of_sky_covered": 0.3,
         "best_month_to_see": "March",
         "represents": "Flying Fish",
-        "history": "Volans is a southern constellation, introduced in the 16th century by Dutch navigators. It represents the flying fish, a species known for gliding over the ocean\u00e2\u20ac\u2122s surface. The constellation is notable for containing several distant galaxies and star clusters.",
+        "history": "Volans is a southern constellation, introduced in the 16th century by Dutch navigators. It represents the flying fish, a species known for gliding over the ocean's surface. The constellation is notable for containing several distant galaxies and star clusters.",
         "fun_fact": "",
         "image": "images\\volans.png"
     },
