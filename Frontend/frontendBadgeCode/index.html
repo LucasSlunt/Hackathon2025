@@ -31,10 +31,11 @@
       <img id="inner-badge-image" src="C:\Users\slunt\UniversityStuff\UBC_Year_3\Hackathon2025\Frontend\badgeGraphics\innerBadgeGraphics\constellation.jpg" alt="Constellation">
     </div>
   </div>
-  <button onclick="changeBadgeTier(1)">Bronze</button>
-  <button onclick="changeBadgeTier(2)">Silver</button>
-  <button onclick="changeBadgeTier(3 )">Gold</button>
   <h3 onclick="setImage('C:/Users/slunt/UniversityStuff/UBC_Year_3/Hackathon2025/Frontend/badgeGraphics/innerBadgeGraphics/terraria.jpg')">change the badge</h3>
+  <label for="fname">image path</label>
+  <input type="text" id="fname" name="fname"> 
+
+  <button onclick=createBadge(2,fname.value)>aweom</button>
   <script src="badgeScript.js"></script>
 </body>
 </html>

@@ -1,3 +1,8 @@
+    function createBadge(level,imagePath){
+      changeBadgeTier(level);
+      setImage(imagePath)
+    }
+    
     function changeBadgeTier(level) {
       // Get all elements with the badge-colour classes
       const colour1Elements = document.querySelectorAll('.badge-colour-1');
