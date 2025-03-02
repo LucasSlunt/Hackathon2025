@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="google-signin-client_id" content="1083152079474-biveh2i14lno929umcf3op1c3345g1tf.apps.googleusercontent.com">
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <!-- <meta name="google-signin-client_id" content="1083152079474-biveh2i14lno929umcf3op1c3345g1tf.apps.googleusercontent.com"> -->
+        <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
     </head>
 <html>
     <body class="container">
@@ -20,8 +20,17 @@
               <li><button onclick="window.location.href='map.html'">Map</button></li>
               <li><button href="#">About</button></li>
               <li><button onclick="window.location.href='constellation.html'">Learn</a></button></li>
-              <div class="g-signin2" data-onsuccess="onSignIn"></div>
+              <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+              <script src="https://accounts.google.com/gsi/client" async defer></script>
+              <div id="g_id_onload"
+              data-client_id="1083152079474-biveh2i14lno929umcf3op1c3345g1tf.apps.googleusercontent.com"
+              data-ux_mode="popup"
+              data-login_uri="https://0090-142-231-93-79.ngrok-free.app/Frontend/index.html/auth/google/callback">
+               </div>
+              <div class="g_id_signin" data-type="standard"></div>
             </ul>
         </nav>
+        
+
     </body>
 </html>

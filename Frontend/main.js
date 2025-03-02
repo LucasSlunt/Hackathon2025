@@ -29,3 +29,20 @@ var viirsOverlay = L.tileLayer(
     }
   );
   viirsOverlay.addTo(map);
+
+
+  function onSignIn(googleUser) {
+    // Get the Google user's profile information
+    var profile = googleUser.getBasicProfile();
+    
+    console.log("ID: " + profile.getId());
+    console.log("Name: " + profile.getName());
+    console.log("Image URL: " + profile.getImageUrl());
+    console.log("Email: " + profile.getEmail());
+
+    // You can also get the ID token if you need to verify the user's identity on the server
+    var id_token = googleUser.getAuthResponse().id_token;
+
+    // Send the ID token to your server for further verification
+    console.log("ID Token: " + id_token);
+  }
