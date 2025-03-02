@@ -4,6 +4,7 @@
        <title>Profile</title>
        <script defer src="profile.js"></script> <!-- Ensure JavaScript loads properly -->
     </head>
+
     <body class="container">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
         <link rel="stylesheet" href="profile.css">
@@ -23,9 +24,10 @@
         <div class="user">
             <img id="profile-pic" src="https://robohash.org/jackson.png?size=100x100" alt="Jackson">
             <div class="user-info">
-                <h3>Jackson</h3>
-                <p>jackson_username</p>
-                <button id="openChangeProfile">Change Profile Image</button>                
+                <div id="userProfile" class="user">
+                    <p>Loading profile...</p> <!-- This will be replaced dynamically -->
+                </div>
+                                
             </div>
 
             <div class="friend-actions">
@@ -70,7 +72,9 @@
         <div class="profile-trophies">
             <h3>Top Badges</h3>
             <div id="selected-trophies" class="trophy-display">
-                <p>Select up to 3 badges.</p>
+                <p><img src="badgeGraphics\example_badge_1.png" height="200" width="200">       
+                    <img src="badgeGraphics\example_badge_2.png" height="200" width="200">
+                    <img src="badgeGraphics\example_badge_3.png" height="200" width="200"></p>
             </div>
             <button class="customize-btn" onclick="openTrophySelector()">Customize Displayed Badges</button>
         </div>

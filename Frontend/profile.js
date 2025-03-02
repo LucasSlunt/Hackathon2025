@@ -1,3 +1,45 @@
+async function loadUserProfile() {
+    try {
+        // Get username from cookies
+        const username = readCookie("username");
+        console.log(username);
+        if (!username) {
+            console.error("No username found in cookies.");
+            document.getElementById("userProfile").innerHTML = "<p>No user logged in.</p>";
+            return;
+        }
+
+        // Fetch user details from the backend
+        const response = await fetch(`http://localhost:8080/api/users/${username}/profile-pic`);
+        if (!response.ok) throw new Error(`Failed to fetch user: ${response.status}`);
+
+        const profilePicUrl = await response.text(); // Expecting a URL string
+
+        // Select profile container
+        const userProfileContainer = document.getElementById("userProfile");
+
+        // Inject user data into the DOM
+        userProfileContainer.innerHTML = `
+            <div class="user-info">
+                <h3>${username}</h3>
+                <button id="openChangeProfile">Change Profile Image</button>
+            </div>
+        `;
+
+        // Attach event listener for profile image change
+        document.getElementById("openChangeProfile").addEventListener("click", () => {
+            document.getElementById("uploadModal").style.display = "flex"; // Show modal
+        });
+
+    } catch (error) {
+        console.error("Error loading user profile:", error);
+        document.getElementById("userProfile").innerHTML = "<p>Failed to load profile. Please try again.</p>";
+    }
+}
+
+//  Run on page load
+document.addEventListener("DOMContentLoaded", loadUserProfile);
+
 document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("uploadModal");
     const openModalBtn = document.getElementById("openChangeProfile");
@@ -80,6 +122,18 @@ function closeViewFriendsPopup() {
     document.getElementById("viewFriendsModal").style.display = "none";
 }
 
+//given the name of the cookie (username) returns value
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
 // Search Users
 // Fetch and Search Users from API
 // Fetch and Search Users from Spring Boot API
@@ -90,9 +144,10 @@ async function searchUsers() {
 
     try {
         // 🔥 Fetch users from new backend API
+        
         const response = await fetch("http://localhost:8080/api/users");
         if (!response.ok) throw new Error("Failed to fetch users");
-
+        
         const allUsers = await response.json(); // Get JSON response
 
         resultsContainer.innerHTML = ""; // Clear loading message
@@ -111,7 +166,7 @@ async function searchUsers() {
 
                 userItem.innerHTML = `
                     <span>${user.username}</span>
-                    <button class="add-friend-btn" onclick="addFriend('${user.id}')">Add</button>
+                    <button class="add-friend-btn" onclick="addFriend('${user.username}')">Add</button>
                 `;
 
                 resultsContainer.appendChild(userItem);
@@ -125,15 +180,21 @@ async function searchUsers() {
 
 
 // Add Friend
-// Add Friend (Now Saves to Database)
-async function addFriend(username) {
+async function addFriend(friendUsername) {
+    cookiedUsername = readCookie("username");
     try {
-        const response = await fetch(`http://localhost:8080/api/users/Alice/addFriend/Gru`, {
+        const response = await fetch(`http://localhost:8080/api/users/${cookiedUsername}/friends/${friendUsername}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" }
         });
 
-        if (!response.ok) throw new Error("Failed to add friend");
+        if (!response.ok) {
+            // Attempt to read the response body for detailed error info
+            const errorMessage = await response.text();
+            throw new Error(`Failed to add friend. Status: ${response.status}, Message: ${errorMessage}`);
+        }
+        //if (!response.ok) 
+            //throw new Error(Failed to add friend, your username is ${cookiedUsername}, friend username is ${friendUsername});
 
         updateFriendList();
         alert("Friend request sent!");
@@ -147,8 +208,9 @@ async function addFriend(username) {
 // Update Friend List
 // Update Friend List (Fetch from API)
 async function updateFriendList() {
+    const cookiedUsername = readCookie("username");
     const friendListContainer = document.getElementById("friendList");
-    
+
     if (!friendListContainer) {
         console.error("Friend list container not found!");
         return;
@@ -157,12 +219,20 @@ async function updateFriendList() {
     friendListContainer.innerHTML = "<p>Loading friends...</p>"; // Show loading state
 
     try {
-        // 🔹 Fetch the real friend list (Replace 'Alice' dynamically if needed)
-        const response = await fetch("http://localhost:8080/api/users/Alice/friends");
+        // Fetch the friend list
+        const response = await fetch(`http://localhost:8080/api/users/${cookiedUsername}/friends`);
 
         if (!response.ok) throw new Error("Failed to fetch friends");
 
-        const friends = await response.json(); // Store fetched data
+        // Parse the response as JSON
+        const friends = await response.json(); // This will be an array of user objects
+
+        console.log("Fetched friends:", friends); // Debugging log
+
+        // Ensure the response is an array
+        if (!Array.isArray(friends)) {
+            throw new Error("Unexpected API response format: Expected an array of friends");
+        }
 
         friendListContainer.innerHTML = ""; // Clear loading state
 
