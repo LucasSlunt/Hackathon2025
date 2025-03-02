@@ -13,41 +13,55 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    // Method to set the profile picture for a user
-    public User setProfilePic(Long userId, String profilePic) {
-        User user = userRepository.findById(userId)
+    // Method to add points to a user's totalPoints
+    public User addPoints(String username, int points) {
+        User user = userRepository.findById(username)
                 .orElseThrow(() -> new RuntimeException("User not found"));
-        user.setProfilePictureURL(profilePic);
+        user.setTotalPoints(user.getTotalPoints() + points);
         return userRepository.save(user);
     }
 
-    // Method to get the profile picture for a user
-    public String getProfilePic(Long userId) {
-        User user = userRepository.findById(userId)
+    // Method to get a user's totalPoints
+    public int getTotalPoints(String username) {
+        User user = userRepository.findById(username)
                 .orElseThrow(() -> new RuntimeException("User not found"));
-        return user.getProfilePictureURL();
+        return user.getTotalPoints();
     }
 
-    public User addFriend(Long userId, Long friendId) {
-        User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
-        User friend = userRepository.findById(friendId).orElseThrow(() -> new RuntimeException("Friend not found"));
+    // Existing methods for profile picture, friends, and favorite locations
+    public User setProfilePic(String username, String profilePic) {
+        User user = userRepository.findById(username)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        user.setProfilePic(profilePic);
+        return userRepository.save(user);
+    }
+
+    public String getProfilePic(String username) {
+        User user = userRepository.findById(username)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        return user.getProfilePic();
+    }
+
+    public User addFriend(String username, String friendUsername) {
+        User user = userRepository.findById(username).orElseThrow(() -> new RuntimeException("User not found"));
+        User friend = userRepository.findById(friendUsername).orElseThrow(() -> new RuntimeException("Friend not found"));
         user.getFriends().add(friend);
         return userRepository.save(user);
     }
 
-    public Set<User> getFriends(Long userId) {
-        User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
+    public Set<User> getFriends(String username) {
+        User user = userRepository.findById(username).orElseThrow(() -> new RuntimeException("User not found"));
         return user.getFriends();
     }
 
-    public User addFavoriteLocation(Long userId, Long locationId) {
-        User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
+    public User addFavoriteLocation(String username, Long locationId) {
+        User user = userRepository.findById(username).orElseThrow(() -> new RuntimeException("User not found"));
         user.getFavoriteLocationIds().add(locationId);
         return userRepository.save(user);
     }
 
-    public Set<Long> getFavoriteLocations(Long userId) {
-        User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
+    public Set<Long> getFavoriteLocations(String username) {
+        User user = userRepository.findById(username).orElseThrow(() -> new RuntimeException("User not found"));
         return user.getFavoriteLocationIds();
     }
 }
