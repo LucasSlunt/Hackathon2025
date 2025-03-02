@@ -3,17 +3,20 @@ package com.hellostar.demo.controller;
 import com.hellostar.demo.entity.User;
 import com.hellostar.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 
 @RestController
 @RequestMapping("/api/users")
+@CrossOrigin(origins = "*")
 public class UserController {
 
     @Autowired
     private UserService userService;
-
     // Endpoint to add points to a user's totalPoints
     @PutMapping("/{username}/add-points")
     public User addPoints(@PathVariable String username, @RequestParam int points) {
@@ -55,5 +58,19 @@ public class UserController {
     @GetMapping("/{username}/favorite-locations")
     public Set<Long> getFavoriteLocations(@PathVariable String username) {
         return userService.getFavoriteLocations(username);
+    }
+
+     @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody Map<String, String> credentials) {
+        String username = credentials.get("username");
+        String password = credentials.get("password");
+
+        Optional<User> user = userService.getUserByUsername(username);
+        
+        if (user.isPresent() && user.get().getPassword().equals(password)) {
+            return ResponseEntity.ok(user.get()); // ✅ Return user details if login is correct
+        } else {
+            return ResponseEntity.status(401).body("Invalid username or password");
+        }
     }
 }

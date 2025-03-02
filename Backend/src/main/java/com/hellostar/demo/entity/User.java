@@ -20,6 +20,9 @@ public class User {
     @Column(nullable = false, columnDefinition = "INT DEFAULT 0") // Add totalPoints with a default value of 0
     private int totalPoints;
 
+    @Column(nullable = false) // 🔥 Ensure password is not NULL
+    private String password;
+
     @ManyToMany
     @JoinTable(
         name = "user_friends",
@@ -46,6 +49,7 @@ public class User {
     public String getEmail() {
         return email;
     }
+
 
     public void setPassword(String email) {
         this.email = email;
@@ -89,5 +93,9 @@ public class User {
 
     public void setFavoriteLocationIds(Set<Long> favoriteLocationIds) {
         this.favoriteLocationIds = favoriteLocationIds;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }
