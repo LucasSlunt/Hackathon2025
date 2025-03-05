@@ -4,7 +4,7 @@ var map = L.map('map').setView([20, 0], 3); // Centered globally
 // Attempt to center map on user's location
 var userLat, userLng, routingControl;
 if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
+    navigator.geolocation.getCurrentPosition(function (position) {
         userLat = position.coords.latitude;
         userLng = position.coords.longitude;
         map.setView([userLat, userLng], 8); // Center map on user's location
@@ -14,7 +14,7 @@ if (navigator.geolocation) {
         }).addTo(map)
             .bindPopup('You are here!')
             .openPopup();
-    }, function() {
+    }, function () {
         alert('Ensure location services are enabled and try again.');
     });
 } else {
@@ -29,15 +29,15 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Add Light Pollution WMS Layer
 var viirsOverlay = L.tileLayer(
-    'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Black_Marble/default/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.png', 
+    'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Black_Marble/default/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.png',
     {
-      attribution: 'NASA Earthdata Black Marble 2016 Night Lights',
-      opacity: 0.6,
-      maxZoom: 18,
-      maxNativeZoom: 8
+        attribution: 'NASA Earthdata Black Marble 2016 Night Lights',
+        opacity: 0.6,
+        maxZoom: 18,
+        maxNativeZoom: 8
     }
-  );
-  viirsOverlay.addTo(map);
+);
+viirsOverlay.addTo(map);
 
 // Function to locate a path between two points using roads
 function locatePath(startLat, startLng, endLat, endLng) {
@@ -53,7 +53,7 @@ function locatePath(startLat, startLng, endLat, endLng) {
         router: L.Routing.osrmv1({
             serviceUrl: 'https://router.project-osrm.org/route/v1'
         }),
-        createMarker: function() { return null; }, // No markers
+        createMarker: function () { return null; }, // No markers
         lineOptions: {
             styles: [{ color: 'blue', weight: 4 }]
         }
@@ -69,8 +69,12 @@ function locatePath(startLat, startLng, endLat, endLng) {
 
 // locatePath( 50.00077, -119.40266, 49.94728, -119.42667);
 
-map.on('click', function(e) {
-    
+map.on('click', function (e) {
+    // if a marker's description is up, clicking on the map removes it instead of trying to add a new location
+    if (document.getElementById('info') !== null) {
+        document.getElementById('info').remove();
+    } else {
+
     var lat = e.latlng.lat;
     var lng = e.latlng.lng;
     console.log('Latitude: ' + lat + ', Longitude: ' + lng);
@@ -103,21 +107,21 @@ map.on('click', function(e) {
             });
         })
         .catch(error => console.error('Error:', error));
-    
+
 
     // Add event listener to the marker to call locatePath when clicked
-    marker.on('click', function() {
-        
+    marker.on('click', function () {
+
         if (userLat !== undefined && userLng !== undefined) {
             locatePath(userLat, userLng, lat, lng);
         } else {
             alert('User location not available.');
         }
     });
-    
-    
 
-    
+
+    }
+
 });
 
 // Load markers from markers.json and add them to the map
@@ -131,11 +135,11 @@ fetch('markers.json')
             }).addTo(map).bindPopup(markerData.description);
 
             // Add event listener to the marker to call locatePath when clicked
-            marker.on('click', function() {
-                if(document.getElementById('info') !== null){
+            marker.on('click', function () {
+                if (document.getElementById('info') !== null) {
                     document.getElementById('info').remove();
                 }
-                var newDiv = document.createElement('div');
+                var newDiv = document.createElement('article');
                 newDiv.id = 'info';
                 newDiv.style.width = '50%';
                 newDiv.style.left = '10px';
@@ -143,9 +147,9 @@ fetch('markers.json')
                 newDiv.style.zIndex = '100';
                 newDiv.style.position = 'absolute';
                 newDiv.style.padding = '10px';
-                newDiv.style.backgroundColor = '#ffffffaa';
-                newDiv.style.border = '1px solid black';
-                newDiv.innerHTML = '<h4></h4><p>'+ markerData.info+'</p>';
+                // newDiv.style.backgroundColor = '#ffffffaa';
+                // newDiv.style.border = '1px solid black';
+                newDiv.innerHTML = '<h1>' + markerData.description + '</h1>' + markerData.info;
                 document.body.appendChild(newDiv);
                 if (userLat !== undefined && userLng !== undefined) {
                     locatePath(userLat, userLng, markerData.latitude, markerData.longitude);
@@ -157,10 +161,10 @@ fetch('markers.json')
     })
     .catch(error => console.error('Error loading markers:', error));
 
-    // Add a div to the DOM
-    
-  
-  //RIGHT HERE theres gonna be the authentication information
+// Add a div to the DOM
+
+
+//RIGHT HERE theres gonna be the authentication information
 
 //name
 //image
@@ -169,23 +173,3 @@ fetch('markers.json')
 const user_name = "Alice";
 const email = "alice@example.com";
 const image_url = "image_url";
-
-fetch ("https://41f4-142-231-180-190.ngrok-free.app/api/users", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-        name: user_name,
-        email: email,
-        imageUrl: image_url
-    })
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error("Failed to save user");
-    }
-    return response.json();
-})
-.then(data => console.log("User saved:", data))
-.catch(error => console.error("Error:", error));
