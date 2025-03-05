@@ -70,6 +70,10 @@ function locatePath(startLat, startLng, endLat, endLng) {
 // locatePath( 50.00077, -119.40266, 49.94728, -119.42667);
 
 map.on('click', function (e) {
+    // if a marker's description is up, clicking on the map removes it instead of trying to add a new location
+    if (document.getElementById('info') !== null) {
+        document.getElementById('info').remove();
+    } else {
 
     var lat = e.latlng.lat;
     var lng = e.latlng.lng;
@@ -116,7 +120,7 @@ map.on('click', function (e) {
     });
 
 
-
+    }
 
 });
 
@@ -135,17 +139,17 @@ fetch('markers.json')
                 if (document.getElementById('info') !== null) {
                     document.getElementById('info').remove();
                 }
-                var newDiv = document.createElement('div');
+                var newDiv = document.createElement('article');
                 newDiv.id = 'info';
-                // newDiv.style.width = '50%';
-                // newDiv.style.left = '10px';
-                // newDiv.style.bottom = '10px';
-                // newDiv.style.zIndex = '100';
-                // newDiv.style.position = 'absolute';
-                // newDiv.style.padding = '10px';
+                newDiv.style.width = '50%';
+                newDiv.style.left = '10px';
+                newDiv.style.bottom = '10px';
+                newDiv.style.zIndex = '100';
+                newDiv.style.position = 'absolute';
+                newDiv.style.padding = '10px';
                 // newDiv.style.backgroundColor = '#ffffffaa';
                 // newDiv.style.border = '1px solid black';
-                newDiv.innerHTML = '<h4></h4><p>' + markerData.info + '</p>';
+                newDiv.innerHTML = '<h1>' + markerData.description + '</h1>' + markerData.info;
                 document.body.appendChild(newDiv);
                 if (userLat !== undefined && userLng !== undefined) {
                     locatePath(userLat, userLng, markerData.latitude, markerData.longitude);
