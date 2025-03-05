@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Light Pollution Map Overlay</title>
+    <title>Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"> -->
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+
 </head>
+
 <body>
 
-    
-    
-    
-    <button onclick="window.location.href='index.html'" class="ui">Home</button>
+    <nav class="container">
+        <h1><strong><img src="assets\logoAdobeNoBorder.png" height="60" width="60"> Hello, Stars!</strong></h1>
+        <ul>
+            <li><button onclick="window.location.href='map.html'"><span class="iconify"
+                        data-icon="material-symbols:map-outline"></span> Map</button></li>
+            <li><button onclick="window.location.href='index.html'"><span class="iconify"
+                        data-icon="material-symbols:location-home-outline-rounded"></span> Home</button></li>
+            <li><button onclick="window.location.href='profile.html'"><span class="iconify"
+                        data-icon="material-symbols:account-circle"></span> Account</button></li>
+        </ul>
+    </nav>
+
 
     <div id="map"></div>
-    
 
     <script src="main.js"></script>
 </body>
-</html>
 
+</html>

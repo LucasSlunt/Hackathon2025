@@ -1,9 +1,9 @@
-body {
+/* body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0; 
-}
+} */
 
 #map {
     height: 100vh;
@@ -16,8 +16,10 @@ body {
     position: fixed;
     top: 10px;
     right: 10px;
-    z-index: 1000; /* Ensure this is higher than the map's z-index */
-    background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a background to make the UI more readable */
+    z-index: 1000;
+    /* Ensure this is higher than the map's z-index */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Optional: Add a background to make the UI more readable */
     padding: 10px;
     border-radius: 5px;
 }
