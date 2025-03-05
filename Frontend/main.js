@@ -137,14 +137,14 @@ fetch('markers.json')
                 }
                 var newDiv = document.createElement('div');
                 newDiv.id = 'info';
-                newDiv.style.width = '50%';
-                newDiv.style.left = '10px';
-                newDiv.style.bottom = '10px';
-                newDiv.style.zIndex = '100';
-                newDiv.style.position = 'absolute';
-                newDiv.style.padding = '10px';
-                newDiv.style.backgroundColor = '#ffffffaa';
-                newDiv.style.border = '1px solid black';
+                // newDiv.style.width = '50%';
+                // newDiv.style.left = '10px';
+                // newDiv.style.bottom = '10px';
+                // newDiv.style.zIndex = '100';
+                // newDiv.style.position = 'absolute';
+                // newDiv.style.padding = '10px';
+                // newDiv.style.backgroundColor = '#ffffffaa';
+                // newDiv.style.border = '1px solid black';
                 newDiv.innerHTML = '<h4></h4><p>' + markerData.info + '</p>';
                 document.body.appendChild(newDiv);
                 if (userLat !== undefined && userLng !== undefined) {
