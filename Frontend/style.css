@@ -23,3 +23,8 @@
     padding: 10px;
     border-radius: 5px;
 }
+
+.leaflet-control-zoom {
+    background-color: #f4f4f4 !important;
+    /* trying to make the buttons not look terrible. I think they are trying to grab css from like 3 different places and getting confused */
+}
