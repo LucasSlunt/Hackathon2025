@@ -6,8 +6,8 @@ Users are encouraged to get out of the house and stargaze, with each adventure e
 
 [Devpost here!](https://devpost.com/software/select-from-sky)
 ## Contributors 
-- [Ivona Nicetin](https://www.linkedin.com/in/ivona-nicetin-8361722a6/),
-- [Timmi Draper](https://www.linkedin.com/in/timandra-draper-667a42265/),
-- [Rowan Fortier](https://www.linkedin.com/in/rowan-fortier-b53261354/),
-- [Graeme Bradford](https://www.linkedin.com/in/graeme-beniston-bradford-04337b331/),
-- [Lucas Slunt](https://www.linkedin.com/in/lucas-slunt-3a170a330/).
+- [Ivona Nicetin](https://github.com/ivonanicetin), [LinkedIn](https://www.linkedin.com/in/ivona-nicetin-8361722a6/),
+- [Timmi Draper](https://github.com/taoTimTim), [LinkedIn](https://www.linkedin.com/in/timandra-draper-667a42265/),
+- [Rowan Fortier](https://github.com/blobinaticuber), [LinkedIn](https://www.linkedin.com/in/rowan-fortier-b53261354/),
+- [Graeme Bradford](https://github.com/GraemeIBB), [LinkedIn](https://www.linkedin.com/in/graeme-beniston-bradford-04337b331/),
+- [Lucas Slunt](https://github.com/LucasSlunt), [LinkedIn](https://www.linkedin.com/in/lucas-slunt-3a170a330/).
