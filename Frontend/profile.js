@@ -31,6 +31,8 @@ async function loadUserProfile() {
             document.getElementById("uploadModal").style.display = "flex"; // Show modal
         });
 
+      
+
         // Fetch and display total points
         await fetchTotalPoints(username); // Pass username as an argument
 
@@ -63,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     closeModalBtn.addEventListener("click", () => {
         modal.style.display = "none";
         closeUploadSelector();
+        
 
     });
 
